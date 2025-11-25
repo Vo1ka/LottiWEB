@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "LaundryApp — Servicio de lavandería a domicilio",
+    "description": "Recogemos tu ropa, la lavamos y te la devolvemos limpia. Servicio rápido en tu ciudad."
+  },
+  "nav": {
+    "home": "Inicio",
+    "pricing": "Tarifas",
+    "howItWorks": "Cómo funciona",
+    "contact": "Contacto",
+    "downloadApp": "Descargar App"
+  },
+  "hero": {
+    "title": "Tu ropa limpia sin salir de casa",
+    "subtitle": "Recogemos, lavamos y entregamos. Así de simple.",
+    "cta": "Descargar App",
+    "ctaSecondary": "Ver tarifas"
+  },
+  "howItWorks": {
+    "title": "¿Cómo funciona?",
+    "step1": {
+      "title": "Haz tu pedido",
+      "description": "Elige el servicio y programa la recogida desde la app"
+    },
+    "step2": {
+      "title": "Recogemos tu ropa",
+      "description": "Un repartidor pasa a recoger tu bolsa de ropa"
+    },
+    "step3": {
+      "title": "Lavamos con cuidado",
+      "description": "Tratamos tu ropa con los mejores productos"
+    },
+    "step4": {
+      "title": "Te la devolvemos",
+      "description": "Recibes tu ropa limpia y doblada en casa"
+    }
+  },
+  "cta": {
+    "title": "¿Listo para olvidarte de la colada?",
+    "subtitle": "Descarga la app y haz tu primer pedido",
+    "button": "Descargar gratis"
+  },
+  "footer": {
+    "legal": "Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "cookies": "Política de Cookies",
+    "contact": "Contacto",
+    "followUs": "Síguenos",
+    "copyright": "© {year} LaundryApp. Todos los derechos reservados."
+  },
+  "cookies": {
+    "title": "Usamos cookies",
+    "description": "Utilizamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra política de cookies.",
+    "accept": "Aceptar",
+    "decline": "Rechazar",
+    "settings": "Configurar"
+  }
+}

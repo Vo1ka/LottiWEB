@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "LaundryApp — Laundry Delivery Service",
+    "description": "We pick up your clothes, wash them, and deliver them back clean. Fast service in your city."
+  },
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "howItWorks": "How it works",
+    "contact": "Contact",
+    "downloadApp": "Download App"
+  },
+  "hero": {
+    "title": "Clean laundry without leaving home",
+    "subtitle": "We pick up, wash, and deliver. It's that simple.",
+    "cta": "Download App",
+    "ctaSecondary": "View pricing"
+  },
+  "howItWorks": {
+    "title": "How does it work?",
+    "step1": {
+      "title": "Place your order",
+      "description": "Choose the service and schedule pickup from the app"
+    },
+    "step2": {
+      "title": "We collect your clothes",
+      "description": "A courier picks up your laundry bag"
+    },
+    "step3": {
+      "title": "We wash with care",
+      "description": "We treat your clothes with the best products"
+    },
+    "step4": {
+      "title": "We deliver it back",
+      "description": "Receive your clean, folded clothes at home"
+    }
+  },
+  "cta": {
+    "title": "Ready to forget about laundry?",
+    "subtitle": "Download the app and place your first order",
+    "button": "Download free"
+  },
+  "footer": {
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "cookies": "Cookie Policy",
+    "contact": "Contact",
+    "followUs": "Follow us",
+    "copyright": "© {year} LaundryApp. All rights reserved."
+  },
+  "cookies": {
+    "title": "We use cookies",
+    "description": "We use cookies to improve your experience. By continuing, you accept our cookie policy.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "settings": "Settings"
+  }
+}
