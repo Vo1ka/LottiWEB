@@ -1,65 +1,67 @@
-import Image from "next/image";
+import { HeroSection } from '@/components/sections/home/HeroSection';
+import { ServicesSection } from '@/components/sections/home/ServicesSection';
+import { WashModesSection } from '@/components/sections/home/WashModesSection';
+import { PricingSection } from '@/components/sections/home/PricingSection';
+import { TestimonialsSection } from '@/components/sections/home/TestimonialsSection';
+import { FAQSection } from '@/components/sections/home/FAQSection';
+import { FinalCTASection } from '@/components/sections/home/FinalCTASection';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { Metadata } from 'next';
+import { LocalePageProps } from '@/types/pages';
 
-export default function Home() {
+export async function generateMetadata({
+  params,
+}: LocalePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  const titles = {
+    es: 'Lotti - Lavandería Online Barcelona | Recogida y Entrega en 3 Horas',
+    en: 'Lotti - Online Laundry Barcelona | Pickup and Delivery in 3 Hours',
+    ru: 'Lotti - Онлайн-прачечная Барселона | Забор и доставка за 3 часа',
+  };
+
+  const descriptions = {
+    es: 'Servicio de lavandería profesional en Barcelona. Recogemos en 30 minutos, devolvemos en 3 horas. Desde €3.99/kg. Descarga la app y obtén 30% de descuento.',
+    en: 'Professional laundry service in Barcelona. Pickup in 30 minutes, return in 3 hours. From €3.99/kg. Download the app and get 30% off.',
+    ru: 'Профессиональная прачечная в Барселоне. Забор за 30 минут, возврат через 3 часа. От €3.99/кг. Скачайте приложение и получите скидку 30%.',
+  };
+
+  return {
+    title: titles[locale as keyof typeof titles],
+    description: descriptions[locale as keyof typeof descriptions],
+    keywords: [
+      'lavandería Barcelona',
+      'lavandería a domicilio',
+      'servicio de lavado',
+      'laundry Barcelona',
+      'прачечная Барселона',
+      'доставка стирки',
+    ],
+    openGraph: {
+      title: titles[locale as keyof typeof titles],
+      description: descriptions[locale as keyof typeof descriptions],
+      images: ['/og-image.jpg'],
+      locale: locale,
+      type: 'website',
+    },
+  };
+}
+
+export default async function HomePage({ params }: LocalePageProps) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Header />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <WashModesSection />
+        <PricingSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <FinalCTASection />
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }

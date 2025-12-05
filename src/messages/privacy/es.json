@@ -1,0 +1,118 @@
+{
+  "title": "Política de Privacidad",
+  "lastUpdated": "Última actualización: 4 de diciembre de 2024",
+  "intro": "En Lotti, respetamos su privacidad y nos comprometemos a proteger sus datos personales.",
+  
+  "section1": {
+    "title": "1. Información que recopilamos",
+    "intro": "En Lotti, recopilamos la siguiente información personal cuando utiliza nuestros servicios:",
+    "items": [
+      "Nombre completo y datos de contacto (dirección de email, número de teléfono)",
+      "Dirección de recogida y entrega",
+      "Información de pago y facturación",
+      "Historial de pedidos y preferencias de servicio",
+      "Datos de navegación y uso de la aplicación/sitio web"
+    ]
+  },
+  
+  "section2": {
+    "title": "2. Cómo utilizamos su información",
+    "intro": "Utilizamos la información recopilada para:",
+    "items": [
+      "Procesar y gestionar sus pedidos de lavandería",
+      "Comunicarnos con usted sobre el estado de su pedido",
+      "Procesar pagos y prevenir fraudes",
+      "Mejorar nuestros servicios y experiencia de usuario",
+      "Enviar comunicaciones de marketing (con su consentimiento)",
+      "Cumplir con obligaciones legales y regulatorias"
+    ]
+  },
+  
+  "section3": {
+    "title": "3. Base legal para el tratamiento",
+    "intro": "Procesamos sus datos personales bajo las siguientes bases legales:",
+    "contract": "Ejecución del contrato: Para proporcionar los servicios que ha solicitado",
+    "consent": "Consentimiento: Para comunicaciones de marketing y cookies no esenciales",
+    "legitimate": "Interés legítimo: Para mejorar nuestros servicios y prevenir fraudes",
+    "legal": "Obligación legal: Para cumplir con requisitos legales y fiscales"
+  },
+  
+  "section4": {
+    "title": "4. Compartir información con terceros",
+    "intro": "Podemos compartir su información con:",
+    "providers": "Proveedores de servicios: Procesadores de pago, servicios de mensajería, hosting",
+    "partners": "Socios logísticos: Para coordinar la recogida y entrega",
+    "authorities": "Autoridades: Cuando sea requerido por ley",
+    "noSale": "Nunca vendemos su información personal a terceros."
+  },
+  
+  "section5": {
+    "title": "5. Seguridad de los datos",
+    "intro": "Implementamos medidas técnicas y organizativas apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Esto incluye:",
+    "items": [
+      "Cifrado SSL/TLS para transmisión de datos",
+      "Almacenamiento seguro en servidores protegidos",
+      "Acceso restringido solo a personal autorizado",
+      "Auditorías de seguridad regulares"
+    ]
+  },
+  
+  "section6": {
+    "title": "6. Sus derechos",
+    "intro": "Bajo el RGPD, usted tiene los siguientes derechos:",
+    "access": "Acceso: Solicitar una copia de sus datos personales",
+    "rectification": "Rectificación: Corregir datos inexactos o incompletos",
+    "erasure": "Supresión: Solicitar la eliminación de sus datos (\"derecho al olvido\")",
+    "restriction": "Limitación: Restringir el procesamiento de sus datos",
+    "portability": "Portabilidad: Recibir sus datos en formato estructurado",
+    "objection": "Oposición: Oponerse al procesamiento de sus datos",
+    "withdraw": "Retirar consentimiento: En cualquier momento, sin afectar la legalidad del procesamiento previo",
+    "contact": "Para ejercer estos derechos, contáctenos en:"
+  },
+  
+  "section7": {
+    "title": "7. Retención de datos",
+    "intro": "Conservamos su información personal solo durante el tiempo necesario para los fines establecidos en esta política:",
+    "account": "Datos de cuenta: Mientras su cuenta esté activa o según sea necesario para prestarle servicios",
+    "transactions": "Datos de transacciones: 6 años (requisitos fiscales y contables)",
+    "marketing": "Datos de marketing: Hasta que retire su consentimiento",
+    "cookies": "Datos de cookies: Según lo especificado en nuestra Política de Cookies"
+  },
+  
+  "section8": {
+    "title": "8. Transferencias internacionales",
+    "intro": "Sus datos pueden ser transferidos y procesados en países fuera del Espacio Económico Europeo (EEE). En tales casos, nos aseguramos de que existan garantías adecuadas, como:",
+    "items": [
+      "Cláusulas contractuales estándar aprobadas por la Comisión Europea",
+      "Certificación del Escudo de Privacidad UE-EE.UU. (cuando aplique)",
+      "Países con decisiones de adecuación de la UE"
+    ]
+  },
+  
+  "section9": {
+    "title": "9. Menores de edad",
+    "content": "Nuestros servicios no están dirigidos a menores de 18 años. No recopilamos intencionalmente información personal de menores. Si descubrimos que hemos recopilado datos de un menor, los eliminaremos de inmediato."
+  },
+  
+  "section10": {
+    "title": "10. Cookies y tecnologías similares",
+    "content": "Utilizamos cookies y tecnologías similares para mejorar su experiencia. Para más información, consulte nuestra",
+    "link": "Política de Cookies"
+  },
+  
+  "section11": {
+    "title": "11. Cambios en esta política",
+    "content": "Podemos actualizar esta Política de Privacidad periódicamente. Le notificaremos cualquier cambio significativo publicando la nueva política en esta página y actualizando la fecha de \"última actualización\". Le recomendamos revisar esta política regularmente."
+  },
+  
+  "section12": {
+    "title": "12. Contacto",
+    "intro": "Si tiene preguntas sobre esta Política de Privacidad o desea ejercer sus derechos, contáctenos:",
+    "company": "Lotti Lavandería",
+    "email": "Email:",
+    "phone": "Teléfono:",
+    "address": "Dirección:",
+    "location": "Barcelona, España",
+    "complaint": "También tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD):"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "title": "Privacy Policy",
+  "lastUpdated": "Last updated: December 4, 2024",
+  "intro": "At Lotti, we respect your privacy and are committed to protecting your personal data.",
+  
+  "section1": {
+    "title": "1. Information We Collect",
+    "intro": "At Lotti, we collect the following personal information when you use our services:",
+    "items": [
+      "Full name and contact details (email address, phone number)",
+      "Pickup and delivery address",
+      "Payment and billing information",
+      "Order history and service preferences",
+      "Browsing data and app/website usage"
+    ]
+  },
+  
+  "section2": {
+    "title": "2. How We Use Your Information",
+    "intro": "We use the information collected to:",
+    "items": [
+      "Process and manage your laundry orders",
+      "Communicate with you about your order status",
+      "Process payments and prevent fraud",
+      "Improve our services and user experience",
+      "Send marketing communications (with your consent)",
+      "Comply with legal and regulatory obligations"
+    ]
+  },
+  
+  "section3": {
+    "title": "3. Legal Basis for Processing",
+    "intro": "We process your personal data under the following legal bases:",
+    "contract": "Contract execution: To provide the services you have requested",
+    "consent": "Consent: For marketing communications and non-essential cookies",
+    "legitimate": "Legitimate interest: To improve our services and prevent fraud",
+    "legal": "Legal obligation: To comply with legal and tax requirements"
+  },
+  
+  "section4": {
+    "title": "4. Sharing Information with Third Parties",
+    "intro": "We may share your information with:",
+    "providers": "Service providers: Payment processors, messaging services, hosting",
+    "partners": "Logistics partners: To coordinate pickup and delivery",
+    "authorities": "Authorities: When required by law",
+    "noSale": "We never sell your personal information to third parties."
+  },
+  
+  "section5": {
+    "title": "5. Data Security",
+    "intro": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes:",
+    "items": [
+      "SSL/TLS encryption for data transmission",
+      "Secure storage on protected servers",
+      "Restricted access to authorized personnel only",
+      "Regular security audits"
+    ]
+  },
+  
+  "section6": {
+    "title": "6. Your Rights",
+    "intro": "Under GDPR, you have the following rights:",
+    "access": "Access: Request a copy of your personal data",
+    "rectification": "Rectification: Correct inaccurate or incomplete data",
+    "erasure": "Erasure: Request deletion of your data (\"right to be forgotten\")",
+    "restriction": "Restriction: Restrict the processing of your data",
+    "portability": "Portability: Receive your data in structured format",
+    "objection": "Objection: Object to the processing of your data",
+    "withdraw": "Withdraw consent: At any time, without affecting the lawfulness of prior processing",
+    "contact": "To exercise these rights, contact us at:"
+  },
+  
+  "section7": {
+    "title": "7. Data Retention",
+    "intro": "We retain your personal information only for as long as necessary for the purposes set out in this policy:",
+    "account": "Account data: While your account is active or as needed to provide services",
+    "transactions": "Transaction data: 6 years (tax and accounting requirements)",
+    "marketing": "Marketing data: Until you withdraw your consent",
+    "cookies": "Cookie data: As specified in our Cookie Policy"
+  },
+  
+  "section8": {
+    "title": "8. International Transfers",
+    "intro": "Your data may be transferred and processed in countries outside the European Economic Area (EEA). In such cases, we ensure that appropriate safeguards are in place, such as:",
+    "items": [
+      "Standard contractual clauses approved by the European Commission",
+      "EU-U.S. Privacy Shield certification (where applicable)",
+      "Countries with EU adequacy decisions"
+    ]
+  },
+  
+  "section9": {
+    "title": "9. Minors",
+    "content": "Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from minors. If we discover that we have collected data from a minor, we will delete it immediately."
+  },
+  
+  "section10": {
+    "title": "10. Cookies and Similar Technologies",
+    "content": "We use cookies and similar technologies to enhance your experience. For more information, please see our",
+    "link": "Cookie Policy"
+  },
+  
+  "section11": {
+    "title": "11. Changes to This Policy",
+    "content": "We may update this Privacy Policy periodically. We will notify you of any significant changes by posting the new policy on this page and updating the \"last updated\" date. We recommend reviewing this policy regularly."
+  },
+  
+  "section12": {
+    "title": "12. Contact",
+    "intro": "If you have questions about this Privacy Policy or wish to exercise your rights, contact us:",
+    "company": "Lotti Laundry",
+    "email": "Email:",
+    "phone": "Phone:",
+    "address": "Address:",
+    "location": "Barcelona, Spain",
+    "complaint": "You also have the right to file a complaint with the Spanish Data Protection Agency (AEPD):"
+  }
+}
