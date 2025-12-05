@@ -7,7 +7,7 @@ export function HeroSection() {
   const t = useTranslations('hero');
 
   return (
-    <section className="relative bg-gradient-to-b from-[#f5f5f5] to-white pt-16 lg:pt-20 pb-0 overflow-hidden">
+    <section className="relative bg-white pt-16 lg:pt-20 pb-0 overflow-hidden">
       {/* Animated Background Bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Большие пузыри */}
@@ -29,9 +29,9 @@ export function HeroSection() {
         <div className="bubble bubble-12" />
       </div>
 
-      {/* Gradient Overlays */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#A8D5E2]/20 to-transparent rounded-full blur-3xl animate-pulse-slow" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#E8B4D9]/20 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+      {/* Gradient Overlays - более тонкие */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#A8D5E2]/10 to-transparent rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#E8B4D9]/10 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Content - Centered */}
@@ -62,7 +62,7 @@ export function HeroSection() {
 
         {/* Illustration - Full Width at Bottom */}
         <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] -mx-4 lg:-mx-8">
-           <Image
+          <Image
             src="/images/hero-illustration.png"
             alt="Lotti Barcelona Laundry Service"
             fill
@@ -70,7 +70,6 @@ export function HeroSection() {
             priority
             sizes="100vw"
           />
-
         </div>
       </div>
     </section>
