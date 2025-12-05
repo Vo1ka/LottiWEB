@@ -1,4 +1,3 @@
-// src/app/[locale]/sobre-nosotros/page.tsx
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Check } from 'lucide-react';

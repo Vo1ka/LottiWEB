@@ -1,3 +1,5 @@
+'use client'
+
 import { useTranslations } from 'next-intl';
 import { Truck, Clock, Sparkles } from 'lucide-react';
 

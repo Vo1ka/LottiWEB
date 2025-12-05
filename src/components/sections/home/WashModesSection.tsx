@@ -1,4 +1,5 @@
-// src/components/sections/home/WashModesSection.tsx
+'use client'
+
 import { useTranslations } from 'next-intl';
 
 interface WashMode {

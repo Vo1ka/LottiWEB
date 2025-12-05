@@ -11,7 +11,14 @@ interface PricingPlan {
 
 export function PricingSection() {
   const t = useTranslations('pricing');
-  const plans: PricingPlan[] = t.raw('plans') || [];
+  
+  // Безопасное получение планов
+  let plans: PricingPlan[] = [];
+  try {
+    plans = t.raw('plans') as PricingPlan[];
+  } catch (error) {
+    console.error('Error loading pricing plans:', error);
+  }
 
   return (
     <section id="tarifas" className="relative py-20 lg:py-28 bg-gradient-to-b from-white to-[#f5f5f5] overflow-hidden">

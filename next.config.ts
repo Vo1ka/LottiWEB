@@ -1,17 +1,17 @@
 import type { NextConfig } from "next";
-const createNextIntlPlugin = require('next-intl/plugin');
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 
 const nextConfig: NextConfig = {
-  /* config options  */
+  /* config options */
   reactCompiler: true,
+  
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      
-    ],
+    remotePatterns: [],
   },
+  
   async headers() {
     return [
       {
@@ -37,8 +37,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-
 };
 
-module.exports = withNextIntl(nextConfig);
-
+export default withNextIntl(nextConfig);

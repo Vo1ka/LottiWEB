@@ -2,9 +2,15 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
+
+import type { Metadata } from 'next';
 import '@/app/globals.css';
-import { LocalePageProps } from '@/types/pages';
 import { CookieBanner } from '@/components/CookieConcent';
+import { LocalePageProps } from '@/types/pages';
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+};
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

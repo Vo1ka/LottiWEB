@@ -10,6 +10,9 @@ import { Footer } from '@/components/layout/Footer';
 import { Metadata } from 'next';
 import { LocalePageProps } from '@/types/pages';
 
+// отключает статический рендеринг
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({
   params,
 }: LocalePageProps): Promise<Metadata> {
@@ -30,21 +33,7 @@ export async function generateMetadata({
   return {
     title: titles[locale as keyof typeof titles],
     description: descriptions[locale as keyof typeof descriptions],
-    keywords: [
-      'lavandería Barcelona',
-      'lavandería a domicilio',
-      'servicio de lavado',
-      'laundry Barcelona',
-      'прачечная Барселона',
-      'доставка стирки',
-    ],
-    openGraph: {
-      title: titles[locale as keyof typeof titles],
-      description: descriptions[locale as keyof typeof descriptions],
-      images: ['/og-image.jpg'],
-      locale: locale,
-      type: 'website',
-    },
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   };
 }
 
