@@ -1,3 +1,4 @@
+// src/components/sections/home/HeroSection.tsx
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -5,8 +6,33 @@ export function HeroSection() {
   const t = useTranslations('hero');
 
   return (
-    <section className="relative bg-[#f5f5f5] pt-16 lg:pt-20 pb-0 overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="relative bg-gradient-to-b from-[#f5f5f5] to-white pt-16 lg:pt-20 pb-0 overflow-hidden">
+      {/* Animated Background Bubbles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Большие пузыри */}
+        <div className="bubble bubble-1" />
+        <div className="bubble bubble-2" />
+        <div className="bubble bubble-3" />
+        <div className="bubble bubble-4" />
+        
+        {/* Средние пузыри */}
+        <div className="bubble bubble-5" />
+        <div className="bubble bubble-6" />
+        <div className="bubble bubble-7" />
+        <div className="bubble bubble-8" />
+        
+        {/* Маленькие пузыри */}
+        <div className="bubble bubble-9" />
+        <div className="bubble bubble-10" />
+        <div className="bubble bubble-11" />
+        <div className="bubble bubble-12" />
+      </div>
+
+      {/* Gradient Overlays */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#A8D5E2]/20 to-transparent rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#E8B4D9]/20 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Content - Centered */}
         <div className="max-w-5xl mx-auto text-center space-y-6 lg:space-y-8 pb-12 lg:pb-16">
           {/* Title */}
@@ -26,7 +52,7 @@ export function HeroSection() {
           <div className="pt-6 lg:pt-8">
             <a
               href="#tarifas"
-              className="inline-flex items-center justify-center px-12 py-4 text-lg font-normal text-gray-900 bg-[#d4e8f0] rounded-full hover:bg-[#c0dce8] transition-colors shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center px-12 py-4 text-lg font-normal text-gray-900 bg-[#d4e8f0] rounded-full hover:bg-[#c0dce8] transition-all shadow-sm hover:shadow-md hover:scale-105"
             >
               {t('cta')}
             </a>
@@ -35,7 +61,7 @@ export function HeroSection() {
 
         {/* Illustration - Full Width at Bottom */}
         <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] -mx-4 lg:-mx-8">
-          <Image
+           <Image
             src="/images/hero-illustration.png"
             alt="Lotti Barcelona Laundry Service"
             fill
@@ -43,6 +69,7 @@ export function HeroSection() {
             priority
             sizes="100vw"
           />
+
         </div>
       </div>
     </section>
