@@ -57,14 +57,12 @@ export function TestimonialsSection() {
 
   // Расчёт смещения с учётом gap
   const getTransform = () => {
-    // На мобильных: каждая карточка 100% + gap 16px
     if (itemsPerPage === 1) {
       return `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 16}px))`;
     }
     
-    // На десктопе: процент от ширины контейнера
     const slidePercentage = 100 / itemsPerPage;
-    const gapSize = itemsPerPage === 4 ? 24 : 16; // lg:gap-6 = 24px
+    const gapSize = itemsPerPage === 4 ? 24 : 16;
     const totalGapCompensation = (currentIndex * gapSize * (itemsPerPage - 1)) / itemsPerPage;
     
     return `translateX(calc(-${currentIndex * slidePercentage}% - ${totalGapCompensation}px))`;
@@ -74,14 +72,14 @@ export function TestimonialsSection() {
     <section id="resenas" className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-[#E8F4F8] to-[#F0F8FB]">
       <div className="section-wrapper">
         {/* Header with Navigation */}
-        <div className="flex items-center justify-between mb-8 md:mb-16 lg:mb-20">
-          {/* Title - left on mobile, center on desktop */}
-          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-serif text-gray-900 md:flex-1 md:text-center">
+        <div className="flex items-end justify-between mb-8 md:mb-16 lg:mb-20">
+          {/* Title - always left, 2 lines */}
+          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-serif text-gray-900 whitespace-pre-line leading-tight">
             {t('title')}
           </h2>
 
-          {/* Navigation Arrows - always visible, right side */}
-          <div className="flex items-center gap-2 md:gap-4 md:flex-1 md:justify-end">
+          {/* Navigation Arrows - right side, aligned to bottom */}
+          <div className="flex items-center gap-2 md:gap-4">
             <button
               onClick={prevSlide}
               disabled={!canGoPrev}
@@ -99,9 +97,6 @@ export function TestimonialsSection() {
               <ChevronRight className="h-5 w-5 md:h-6 md:w-6 text-gray-900" />
             </button>
           </div>
-
-          {/* Empty spacer for desktop centering */}
-          <div className="hidden md:block flex-1" />
         </div>
 
         {/* Testimonials Carousel */}
@@ -120,22 +115,22 @@ export function TestimonialsSection() {
                   width: `calc(${100 / itemsPerPage}% - ${((itemsPerPage - 1) * (itemsPerPage === 4 ? 24 : 16)) / itemsPerPage}px)`,
                 }}
               >
-                <div className="bg-white rounded-2xl md:rounded-3xl p-5 md:p-6 lg:p-8 h-full relative transition-all lg:hover:ring-2 lg:hover:ring-[#5a9fb8] lg:hover:shadow-lg group flex flex-col min-h-[380px] md:min-h-[420px] lg:min-h-[480px]">
+                <div className="bg-white rounded-2xl md:rounded-3xl p-5 md:p-6 lg:p-8 h-full flex flex-col">
                   {/* Quote Icon */}
                   <div className="mb-4 md:mb-6">
                     <Quote
-                      className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[#d4e8f0] lg:group-hover:text-[#5a9fb8] transition-colors"
+                      className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[#d4e8f0]"
                       strokeWidth={1.5}
                     />
                   </div>
 
-                  {/* Text */}
-                  <p className="text-[15px] md:text-sm lg:text-base text-gray-700 leading-relaxed font-serif flex-grow">
+                  {/* Text - полный текст */}
+                  <p className="text-[15px] md:text-sm lg:text-base text-gray-700 leading-relaxed font-serif flex-grow mb-6">
                     "{testimonial.text}"
                   </p>
 
                   {/* Author Section */}
-                  <div className="border-t border-gray-200 pt-4 md:pt-6 mt-4 md:mt-6">
+                  <div className="border-t border-gray-200 pt-4 md:pt-6">
                     <div className="flex flex-col items-center text-center">
                       <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full mb-3 md:mb-4 overflow-hidden relative">
                         <Image

@@ -59,11 +59,11 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-cormorant), 'Cormorant', Georgia, serif;
   }
   
   .font-serif {
-    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-cormorant), 'Cormorant', Georgia, serif;
   }
 }
 

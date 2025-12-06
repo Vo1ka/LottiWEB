@@ -31,10 +31,10 @@ export function WashModesSection() {
       <div className="section-wrapper">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-8 md:mb-16 lg:mb-20">
-          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-serif text-gray-900 mb-4 md:mb-6">
+          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-serif text-gray-900 mb-4 md:mb-6 whitespace-pre-line">
             {t('title')}
           </h2>
-          <p className="text-[15px] md:text-base lg:text-lg text-gray-700 leading-relaxed px-4 md:px-0">
+          <p className="text-[15px] md:text-base lg:text-lg text-gray-700 leading-relaxed px-4 md:px-0 whitespace-pre-line">
             {t('subtitle')}
           </p>
         </div>

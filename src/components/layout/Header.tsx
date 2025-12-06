@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Menu, X, Download } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export function Header() {
   const t = useTranslations('nav');
@@ -32,9 +32,6 @@ export function Header() {
     { name: t('reviews'), href: isHomePage ? '#resenas' : '/#resenas' },
     { name: t('contacts'), href: '/contacto' },
   ];
-
-  const leftNavigation = navigation.slice(0, 3);
-  const rightNavigation = navigation.slice(3);
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#') && isHomePage) {
@@ -70,33 +67,19 @@ export function Header() {
             </button>
           </div>
 
-          {/* Left Navigation - Desktop */}
-          <div className="hidden lg:flex items-center gap-10 flex-1">
-            {leftNavigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleAnchorClick(e, item.href)}
-                className="text-[20px] font-serif font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Center Logo */}
+          {/* Logo - Left on Desktop, Center on Mobile */}
           <Link
             href="/"
-            className="absolute left-1/2 -translate-x-1/2 lg:relative lg:left-auto lg:translate-x-0 lg:mx-11 shrink-0"
+            className="absolute left-1/2 -translate-x-1/2 lg:relative lg:left-auto lg:translate-x-0 shrink-0"
           >
             <span className="text-[24px] lg:text-[31px] font-serif font-bold text-gray-900 tracking-wide">
               LOTTI
             </span>
           </Link>
 
-          {/* Right Navigation - Desktop */}
-          <div className="hidden lg:flex items-center gap-10 flex-1 justify-end">
-            {rightNavigation.map((item) => (
+          {/* Center Navigation - Desktop Only */}
+          <div className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+            {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -106,28 +89,28 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            
-            {/* CTA Button - Desktop */}
+          </div>
+
+          {/* Right CTA Button - Desktop */}
+          <div className="hidden lg:block ml-auto">
             <a
               href={appLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#5a9fb8] text-white rounded-full hover:bg-[#4a8fa8] transition-colors text-base font-serif whitespace-nowrap"
+              className="inline-flex items-center justify-center px-8 py-2.5 bg-[#d4e8f0] text-gray-900 rounded-full hover:bg-[#c0dce8] transition-colors text-base font-serif whitespace-nowrap"
             >
-              <Download className="h-4 w-4" />
               {t('downloadApp')}
             </a>
           </div>
 
           {/* Mobile: Download Button Right */}
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden ml-auto">
             <a
               href={appLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#5a9fb8] text-white rounded-full hover:bg-[#4a8fa8] transition-colors text-sm font-serif"
+              className="inline-flex items-center justify-center px-4 py-2 bg-[#d4e8f0] text-gray-900 rounded-full hover:bg-[#c0dce8] transition-colors text-sm font-serif"
             >
-              <Download className="h-3.5 w-3.5" />
               {t('download')}
             </a>
           </div>

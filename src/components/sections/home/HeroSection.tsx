@@ -31,7 +31,7 @@ export function HeroSection() {
       <div className="section-wrapper relative z-10">
         {/* Content - Centered */}
         <div className="max-w-5xl mx-auto text-center space-y-6 lg:space-y-8 pb-12 lg:pb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 leading-tight whitespace-pre-line">
             {t('title')}
           </h1>
 

@@ -29,7 +29,7 @@ export function ServicesSection() {
       <div className="section-wrapper">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
-          <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 mb-6 ">
             {t('title')}
           </h2>
           <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
