@@ -1,48 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 
 export function Header() {
   const t = useTranslations('nav');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [appLink, setAppLink] = useState('#');
   const pathname = usePathname();
 
   const isHomePage = pathname === '/' || pathname === '/en' || pathname === '/ru' || pathname === '/es';
 
+  // Определение платформы только на клиенте
+  useEffect(() => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(userAgent)) {
+      setAppLink(process.env.NEXT_PUBLIC_APP_STORE_URL || 'https://apps.apple.com');
+    } else {
+      setAppLink(process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || 'https://play.google.com');
+    }
+  }, []);
+
   const navigation = [
-    { 
-      name: t('home'), 
-      href: '/',
-    },
-    { 
-      name: t('services'), 
-      href: isHomePage ? '#servicios' : '/#servicios',
-    },
-    { 
-      name: t('washModes'), 
-      href: isHomePage ? '#modos' : '/#modos',
-    },
-    { 
-      name: t('pricing'), 
-      href: isHomePage ? '#tarifas' : '/#tarifas',
-    },
-    { 
-      name: t('reviews'), 
-      href: isHomePage ? '#resenas' : '/#resenas',
-    },
-    { 
-      name: t('about'), 
-      href: '/sobre-nosotros',
-    },
-    { 
-      name: t('contacts'), 
-      href: '/contacto',
-    },
+    { name: t('home'), href: '/' },
+    { name: t('services'), href: isHomePage ? '#servicios' : '/#servicios' },
+    { name: t('washModes'), href: isHomePage ? '#modos' : '/#modos' },
+    { name: t('faq'), href: isHomePage ? '#faq' : '/#faq' },
+    { name: t('reviews'), href: isHomePage ? '#resenas' : '/#resenas' },
+    { name: t('contacts'), href: '/contacto' },
   ];
 
   const leftNavigation = navigation.slice(0, 3);
@@ -53,96 +41,101 @@ export function Header() {
       e.preventDefault();
       const element = document.querySelector(href);
       if (element) {
-        const headerOffset = 96;
+        const headerOffset = 80;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
       setMobileMenuOpen(false);
     }
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#f5f5f5]/95 backdrop-blur-sm border-b border-gray-200">
-      <nav className="container mx-auto px-4 lg:px-8">
-        <div className="flex h-24 items-center">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
+      <div className="section-wrapper">
+        <nav className="flex h-16 lg:h-24 items-center justify-between">
+          {/* Mobile: Burger Left */}
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="p-2 -ml-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6 text-gray-900" />
+              ) : (
+                <Menu className="h-6 w-6 text-gray-900" />
+              )}
+            </button>
+          </div>
+
           {/* Left Navigation - Desktop */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-10 flex-1 justify-start">
+          <div className="hidden lg:flex items-center gap-10 flex-1">
             {leftNavigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleAnchorClick(e, item.href)}
-                className="text-base text-gray-900 hover:text-[#5a9fb8] transition-colors font-normal relative group whitespace-nowrap"
+                className="text-[20px] font-serif font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5a9fb8] transition-all group-hover:w-full" />
               </Link>
             ))}
           </div>
 
           {/* Center Logo */}
-             <Link
-                href="/"
-                className="flex-shrink-0 mx-auto lg:mx-8"
-                >
-                <div className="relative">
-                    <span 
-                    className="text-4xl lg:text-5xl font-black tracking-tight"
-                    style={{
-                        background: 'linear-gradient(180deg, #A8D5E2 0%, #E8B4D9 100%)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
-                        textShadow: '0 2px 8px rgba(168, 213, 226, 0.3)',
-                        filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))',
-                        WebkitTextStroke: '2px #2D4A6E',
-                        paintOrder: 'stroke fill',
-                    }}
-                    >
-                    LOTTI
-                    </span>
-                </div>
-</Link>
-
+          <Link
+            href="/"
+            className="absolute left-1/2 -translate-x-1/2 lg:relative lg:left-auto lg:translate-x-0 lg:mx-11 shrink-0"
+          >
+            <span className="text-[24px] lg:text-[31px] font-serif font-bold text-gray-900 tracking-wide">
+              LOTTI
+            </span>
+          </Link>
 
           {/* Right Navigation - Desktop */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-10 flex-1 justify-end">
+          <div className="hidden lg:flex items-center gap-10 flex-1 justify-end">
             {rightNavigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleAnchorClick(e, item.href)}
-                className="text-base text-gray-900 hover:text-[#5a9fb8] transition-colors font-normal relative group whitespace-nowrap"
+                className="text-[20px] font-serif font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5a9fb8] transition-all group-hover:w-full" />
               </Link>
             ))}
+            
+            {/* CTA Button - Desktop */}
+            <a
+              href={appLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#5a9fb8] text-white rounded-full hover:bg-[#4a8fa8] transition-colors text-base font-serif whitespace-nowrap"
+            >
+              <Download className="h-4 w-4" />
+              {t('downloadApp')}
+            </a>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            className="lg:hidden p-2 ml-auto rounded-lg hover:bg-gray-200 transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-900" />
-            ) : (
-              <Menu className="h-6 w-6 text-gray-900" />
-            )}
-          </button>
-        </div>
+          {/* Mobile: Download Button Right */}
+          <div className="flex lg:hidden">
+            <a
+              href={appLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#5a9fb8] text-white rounded-full hover:bg-[#4a8fa8] transition-colors text-sm font-serif"
+            >
+              <Download className="h-3.5 w-3.5" />
+              {t('download')}
+            </a>
+          </div>
+        </nav>
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-6 animate-in slide-in-from-top-2">
+          <div className="lg:hidden border-t border-gray-100 py-6">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
@@ -152,7 +145,7 @@ export function Header() {
                     handleAnchorClick(e, item.href);
                     setMobileMenuOpen(false);
                   }}
-                  className="text-base text-gray-900 hover:text-[#5a9fb8] transition-colors py-2"
+                  className="text-lg font-serif text-gray-900 hover:text-gray-600 transition-colors py-2"
                 >
                   {item.name}
                 </Link>
@@ -160,7 +153,7 @@ export function Header() {
             </div>
           </div>
         )}
-      </nav>
+      </div>
     </header>
   );
 }

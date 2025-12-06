@@ -1,76 +1,44 @@
 {
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "washModes": "Modes",
-    "reviews": "Reviews",
-    "contacts": "Contact",
-    "pricing": "Pricing",
-    "about": "About",
-    "faq": "FAQ"
-  },
   "hero": {
-    "title": "Online Laundry in Barcelona",
+    "title": "3-Hour Laundry Delivery Service in Barcelona",
+    "cta": "Download & Get 30% Off",
     "features": [
-      "We pick up your clothes in 30 minutes",
-      "We return them clean in 3 hours",
-      "Transparent prices from €3.99/kg",
-      "Real-time tracking"
-    ],
-    "cta": "Download app"
+      "Pick up in 30 minutes — return in 3 hours",
+      "30% off your first order",
+      "Real-time courier tracking",
+      "Transparent pricing from €3.99/kg — no hidden fees"
+    ]
   },
+  
   "services": {
-    "title": "Our Services",
-    "subtitle": "Everything you need to keep your clothes impeccable",
+    "title": "Why 200+ Barcelona Residents Chose Lotti",
+    "subtitle": "Save 4+ hours every week. Trust the laundry to professionals",
     "items": [
       {
-        "title": "Fast Pickup",
-        "description": "We pick up your clothes in less than 30 minutes from when you place your order"
+        "title": "30-Minute Pickup",
+        "description": "Place your order in the app — courier arrives within 30 minutes. We work 8:00 AM - 10:00 PM, 7 days a week"
       },
       {
         "title": "Professional Washing",
-        "description": "We use high-quality products and modern equipment for every type of fabric"
+        "description": "6 wash modes for any fabric. Premium hypoallergenic detergents. Clothes 100% insured"
       },
       {
-        "title": "Express Delivery",
-        "description": "We return your clothes clean and perfectly folded in just 3 hours"
+        "title": "3-Hour Return",
+        "description": "Express processing of your order. Clothes returned clean, ironed and carefully packaged"
       }
     ]
   },
-  "testimonials": {
-    "title": "What our customers say",
-    "writeReview": "Write a review",
-    "items": [
-      {
-        "name": "Maria Garcia",
-        "text": "Amazing service. Always on time and my clothes look perfect. I recommend it 100%.",
-        "usage": "Uses the service weekly"
-      },
-      {
-        "name": "Carlos Rodriguez",
-        "text": "Best decision to save time. The app is very easy to use and the service is impeccable.",
-        "usage": "Customer for 6 months"
-      },
-      {
-        "name": "Laura Martinez",
-        "text": "Excellent customer service. They took great care of my delicate garments.",
-        "usage": "Uses the service monthly"
-      },
-      {
-        "name": "David Lopez",
-        "text": "Fast, professional and good price. Can't ask for more. Now I have more free time.",
-        "usage": "VIP Customer"
-      }
-    ]
-  },
+
   "washModes": {
-    "title": "Wash Modes",
-    "subtitle": "We wash any type of fabric, choosing the right mode to preserve its original appearance",
+    "title": "6 Wash Modes for Perfect Results",
+    "subtitle": "We select the optimal mode for each fabric type. From delicate silk to heavily soiled whites",
+    "washLabel": "Wash",
+    "dryLabel": "Dry",
     "modes": [
       {
         "id": "cold",
         "name": "Cold",
-        "description": "Colored clothes, synthetics, no stains",
+        "description": "Colored, synthetic, no shrinkage",
         "temperature": "20°C",
         "spin": "1000 rpm",
         "washTime": "30 min",
@@ -79,7 +47,7 @@
       {
         "id": "delicate",
         "name": "Delicate",
-        "description": "Silk, lace, white clothes",
+        "description": "Silk, lace, lingerie",
         "temperature": "20°C",
         "spin": "600 rpm",
         "washTime": "30 min",
@@ -88,7 +56,7 @@
       {
         "id": "warm30",
         "name": "Warm 30",
-        "description": "Daily wear, colored, synthetics, cotton",
+        "description": "Everyday wear, colored, cotton",
         "temperature": "30°C",
         "spin": "1000 rpm",
         "washTime": "30 min",
@@ -97,16 +65,16 @@
       {
         "id": "warm40",
         "name": "Warm 40",
-        "description": "Bed linen, towels, stains, cotton",
+        "description": "Bedding, towels, stains, cotton",
         "temperature": "40°C",
         "spin": "1200 rpm",
         "washTime": "30 min",
         "dryTime": "30 min"
       },
       {
-        "id": "noConditioner",
-        "name": "No Softener",
-        "description": "Sportswear, allergies, towels",
+        "id": "no-conditioner",
+        "name": "No Conditioner",
+        "description": "Sportswear, for allergies",
         "temperature": "30°C",
         "spin": "1000 rpm",
         "washTime": "30 min",
@@ -115,7 +83,7 @@
       {
         "id": "hot60",
         "name": "Hot 60",
-        "description": "White clothes, heavily soiled, disinfection",
+        "description": "White laundry, heavily soiled",
         "temperature": "60°C",
         "spin": "1200 rpm",
         "washTime": "30 min",
@@ -123,97 +91,174 @@
       }
     ]
   },
+
   "pricing": {
-    "title": "Pricing",
-    "subtitle": "Transparent prices with no hidden fees",
+    "title": "Transparent Pricing with No Hidden Fees",
+    "subtitle": "Pay only for the weight of laundry. No extra charges for urgency or weekends",
     "perKg": "per kg",
+    "cta": "Download App",
     "plans": [
       {
-        "name": "One-time wash",
+        "name": "Try It",
         "price": "5.99",
-        "description": "Perfect to try the service",
+        "description": "First order with 30% discount",
         "features": [
-          "Pickup within 30 minutes",
-          "Return in 3 hours",
-          "All wash modes",
-          "Order tracking"
+          "30-minute pickup",
+          "3-hour return",
+          "All 6 wash modes",
+          "Real-time tracking"
         ]
       },
       {
         "name": "Weekly",
         "price": "4.99",
-        "description": "Most popular choice",
+        "description": "Save 17% — chosen by 68% of customers",
         "popular": true,
         "features": [
-          "Everything from one-time",
-          "17% discount",
+          "Everything from «Try It»",
+          "17% off every order",
           "Priority processing",
-          "Flexible schedule"
+          "Flexible pickup schedule"
         ]
       },
       {
         "name": "Monthly",
         "price": "3.99",
-        "description": "Maximum savings",
+        "description": "Maximum savings — 33% discount",
         "features": [
-          "Everything from weekly",
-          "33% discount",
+          "Everything from «Weekly»",
+          "33% off every order",
           "Personal manager",
-          "Free storage"
+          "Free storage up to 7 days"
         ]
       }
-    ],
-    "cta": "Choose plan"
+    ]
   },
+
+  "testimonials": {
+    "title": "Over 2,800 Happy Customers in Barcelona",
+    "writeReview": "Write a Review",
+    "items": [
+      {
+        "name": "Liana E.",
+        "text": "Amazing service! Picked up in 25 minutes, returned in 3 hours. Clothes smell fresh, everything perfectly ironed. Now ordering every week.",
+        "usage": "Uses service weekly",
+        "avatar": "/images/testimonials/avatar1.png"
+      },
+      {
+        "name": "Maria G.",
+        "text": "Best solution for saving time. The app is very simple — order takes 2 minutes. Couriers are always polite and punctual.",
+        "usage": "Customer for 6 months",
+        "avatar": "/images/testimonials/avatar2.png"
+      },
+      {
+        "name": "James R.",
+        "text": "Very careful with my delicate items. Silk shirts came back like new. Excellent customer service — answered all my questions.",
+        "usage": "Uses service monthly",
+        "avatar": "/images/testimonials/avatar3.png"
+      },
+      {
+        "name": "Sophia K.",
+        "text": "Fast, professional and fair price. Save 5+ hours every week. Now I have more time for family and hobbies. Highly recommend!",
+        "usage": "VIP customer",
+        "avatar": "/images/testimonials/avatar4.png"
+      },
+      {
+        "name": "David L.",
+        "text": "Super simple app and flawless service. Real-time courier tracking — very convenient. Transparent prices, no hidden charges.",
+        "usage": "Uses service monthly",
+        "avatar": "/images/testimonials/avatar5.png"
+      }
+    ]
+  },
+
   "faq": {
     "title": "Frequently Asked Questions",
     "items": [
       {
-        "question": "How does the service work?",
-        "answer": "You place an order through the app, the courier arrives at a convenient time, picks up the clothes, we wash them with professional products and return them clean in 3 hours."
+        "question": "How does Lotti service work?",
+        "answer": "1) Download the app and place your order in 2 minutes. 2) Courier arrives within 30 minutes and picks up your laundry. 3) We professionally wash your clothes. 4) In 3 hours courier returns clean and ironed laundry. Track order status in real-time."
+      },
+      {
+        "question": "How much does delivery cost?",
+        "answer": "Delivery is completely free for orders from 3 kg. For orders under 3 kg — €2.99. No extra charges for urgency, weekends or holidays."
       },
       {
         "question": "What payment methods do you accept?",
-        "answer": "We accept all major bank cards (Visa, Mastercard, American Express), Apple Pay, Google Pay and cash on delivery."
+        "answer": "We accept all major credit cards (Visa, Mastercard, American Express), Apple Pay, Google Pay and Bizum. Cash payment to courier is also available."
       },
-            {
-        "question": "How quickly do you pick up clothes?",
-        "answer": "We strive to pick up your clothes within 30 minutes after placing an order. You can track the courier's location in real-time through the app."
+      {
+        "question": "How fast do you pick up clothes?",
+        "answer": "We strive to pick up your clothes within 30 minutes after placing the order. In 94% of cases the courier arrives in 20-25 minutes. You can track courier's location in real-time in the app."
       },
       {
         "question": "What if clothes get damaged?",
-        "answer": "All items are insured. If damage occurs due to our fault, we compensate the full value of the item according to market price."
+        "answer": "All clothes are 100% insured. If damage occurred due to our fault, we compensate full market value of the item within 48 hours. In 3 years of operation the damage rate is less than 0.1%."
       },
       {
         "question": "Can I cancel an order?",
-        "answer": "Yes, you can cancel the order for free until the courier picks up your clothes. After pickup, the standard service cost applies."
+        "answer": "Yes, you can cancel the order for free until the courier picks up your clothes. After pickup the standard service cost applies. Cancellation is done in 1 click in the app."
       },
       {
-        "question": "Do you work on weekends?",
-        "answer": "Yes, we work 7 days a week from 8:00 AM to 10:00 PM, including holidays."
+        "question": "Do you work on weekends and holidays?",
+        "answer": "Yes, we work 7 days a week from 8:00 AM to 10:00 PM, including all holidays. No extra charges for weekends and holidays."
+      },
+      {
+        "question": "What detergents do you use for washing?",
+        "answer": "We use only professional premium hypoallergenic detergents. They are safe for sensitive skin and suitable for children's clothing. Eco-friendly detergents without chemical additives available upon request."
       }
     ]
   },
+
   "finalCta": {
-    "title": "Ready to try?",
-    "subtitle": "Download the app and get 30% off your first order",
-    "downloadApp": "Download app",
+    "title": "Ready to Get Back 4+ Hours Every Week?",
+    "subtitle": "Download the app and get 30% off your first order. No card registration required",
+    "mockupAlt": "Lotti App for iOS and Android",
     "features": [
-      "30% off first order",
-      "Real-time tracking",
-      "Convenient payment"
+      "30% off first order — save up to €15",
+      "Real-time courier tracking",
+      "Pay after receiving clean laundry"
     ]
   },
+
   "footer": {
-    "brand": "Professional laundry service with pickup and home delivery in Barcelona.",
+    "description": "Professional laundry with 3-hour delivery in Barcelona. Over 2,800 satisfied customers. We work 7 days a week from 8:00 AM to 10:00 PM.",
     "quickLinks": "Quick Links",
-    "legal": "Legal",
-    "contact": "Contact",
-    "rights": "All rights reserved."
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "cookies": "Cookie Policy"
+    },
+    "contact": {
+      "title": "Contact",
+      "location": "Barcelona, Spain"
+    },
+    "copyright": "All rights reserved."
   },
+
+
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "washModes": "Modes",
+    "faq": "FAQ",
+    "reviews": "Reviews",
+    "contacts": "Contact",
+    "downloadApp": "Download",
+    "download": "Download"
+  },
+
   "contacts": {
     "title": "Contact Us",
-    "subtitle": "Have questions? We're always here to help",
+    "subtitle": "Have questions? We respond within 15 minutes during business hours",
+    "info": {
+      "title": "Contact Information",
+      "address": "Barcelona, Spain",
+      "phone": "+34 635 669 900",
+      "email": "info@lotti.com",
+      "hours": "Mon-Sun: 8:00 AM - 10:00 PM"
+    },
     "form": {
       "title": "Send Message",
       "name": "Your name",
@@ -221,46 +266,41 @@
       "phone": "Phone",
       "message": "Message",
       "submit": "Send",
-      "success": "Message sent!",
-      "error": "Error sending"
-    },
-    "info": {
-      "title": "Contact Information",
-      "address": "Barcelona, Spain",
-      "phone": "+34 XXX XXX XXX",
-      "email": "info@lotti.com",
-      "hours": "Mon-Sun: 8:00 AM - 10:00 PM"
+      "success": "Message sent! We'll respond within 15 minutes",
+      "error": "Sending error. Try calling us"
     },
     "social": {
-      "title": "Social Media"
+      "title": "Follow us on social media"
     }
   },
+
   "notFound": {
     "title": "Page Not Found",
     "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
     "backHome": "Back to Home"
   },
+
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: December 4, 2024",
-    "intro": "At Lotti, we respect your privacy and are committed to protecting your personal data.",
+    "intro": "At Lotti we respect your privacy and are committed to protecting your personal data in accordance with GDPR.",
     "section1": {
       "title": "1. Information We Collect",
-      "intro": "At Lotti, we collect the following personal information when you use our services:",
+      "intro": "At Lotti we collect the following personal information when using our services:",
       "items": [
         "Full name and contact details (email address, phone number)",
         "Pickup and delivery address",
         "Payment and billing information",
         "Order history and service preferences",
-        "Browsing data and app/website usage"
+        "Navigation and app/website usage data"
       ]
     },
     "section2": {
       "title": "2. How We Use Your Information",
-      "intro": "We use the information collected to:",
+      "intro": "We use the collected information to:",
       "items": [
         "Process and manage your laundry orders",
-        "Communicate with you about your order status",
+        "Communicate with you about order status",
         "Process payments and prevent fraud",
         "Improve our services and user experience",
         "Send marketing communications (with your consent)",
@@ -270,86 +310,88 @@
     "section3": {
       "title": "3. Legal Basis for Processing",
       "intro": "We process your personal data under the following legal bases:",
-      "contract": "Contract execution: To provide the services you have requested",
-      "consent": "Consent: For marketing communications and non-essential cookies",
+      "consent": "Consent: For marketing communications and optional cookies",
+      "contract": "Contract performance: To provide requested services",
       "legitimate": "Legitimate interest: To improve our services and prevent fraud",
       "legal": "Legal obligation: To comply with legal and tax requirements"
     },
     "section4": {
       "title": "4. Sharing Information with Third Parties",
       "intro": "We may share your information with:",
-      "providers": "Service providers: Payment processors, messaging services, hosting",
+      "providers": "Service providers: Payment processors, delivery services, hosting",
       "partners": "Logistics partners: To coordinate pickup and delivery",
       "authorities": "Authorities: When required by law",
       "noSale": "We never sell your personal information to third parties."
     },
     "section5": {
       "title": "5. Data Security",
-      "intro": "We implement appropriate technical and organizational measures to protect your personal information:",
+      "intro": "We apply appropriate technical and organizational measures to protect your personal information:",
       "items": [
         "SSL/TLS encryption for data transmission",
         "Secure storage on protected servers",
-        "Restricted access to authorized personnel only",
+        "Limited access only for authorized personnel",
         "Regular security audits"
       ]
     },
     "section6": {
       "title": "6. Your Rights",
-      "intro": "Under GDPR, you have the following rights:",
+      "intro": "In accordance with GDPR, you have the following rights:",
       "access": "Access: Request a copy of your personal data",
       "rectification": "Rectification: Correct inaccurate or incomplete data",
       "erasure": "Erasure: Request deletion of your data",
-      "restriction": "Restriction: Restrict the processing of your data",
-      "portability": "Portability: Receive your data in structured format",
-      "objection": "Objection: Object to the processing of your data",
+      "restriction": "Restriction: Limit processing of your data",
+      "portability": "Portability: Obtain your data in structured format",
+      "objection": "Objection: Object to processing of your data",
       "withdraw": "Withdraw consent: At any time",
-      "contact": "To exercise these rights, contact us at:"
+      "contact": "To exercise these rights contact us: privacy@lotti.com"
     },
     "section7": {
       "title": "7. Data Retention",
-      "intro": "We retain your personal information only for as long as necessary:",
+      "intro": "We retain your personal information only for the necessary time:",
       "account": "Account data: While your account is active",
       "transactions": "Transaction data: 6 years (tax requirements)",
       "marketing": "Marketing data: Until you withdraw your consent",
-      "cookies": "Cookie data: As specified in our Cookie Policy"
+      "cookies": "Cookie data: According to our Cookie Policy"
     },
     "section8": {
       "title": "8. International Transfers",
       "intro": "Your data may be transferred outside the EEA with appropriate safeguards:",
       "items": [
-        "Standard contractual clauses approved by the EU",
-        "EU-U.S. Privacy Shield certification",
+        "EU-approved standard contractual clauses",
+        "EU-US Privacy Shield certification",
         "Countries with EU adequacy decisions"
       ]
     },
     "section9": {
       "title": "9. Minors",
-      "content": "We do not knowingly collect information from individuals under 18 years of age."
+      "content": "We do not intentionally collect information from persons under 18 years old."
     },
     "section10": {
       "title": "10. Cookies",
-      "content": "We use cookies to enhance your experience. See our",
+      "content": "We use cookies to improve your experience. See our",
       "link": "Cookie Policy"
     },
     "section11": {
       "title": "11. Changes to This Policy",
-      "content": "We may update this policy periodically. We will notify you of significant changes."
+      "content": "We may periodically update this policy. We will notify you of substantial changes by email 30 days before the changes take effect."
     },
     "section12": {
       "title": "12. Contact",
-      "intro": "For questions about this policy, contact us:",
+      "intro": "For questions about this policy contact us:",
       "company": "Lotti Laundry",
-      "email": "Email:",
-      "phone": "Phone:",
       "address": "Address:",
       "location": "Barcelona, Spain",
-      "complaint": "You may file a complaint with the AEPD:"
+      "email": "Email: privacy@lotti.com",
+      "phone": "Phone: +34 635 669 900",
+      "complaint": "You can file a complaint with the Spanish Data Protection Agency (AEPD): www.aepd.es"
     }
   },
+
   "terms": {
-    "title": "Terms and Conditions",
+    "title": "Terms & Conditions",
     "lastUpdated": "Last updated: December 4, 2024"
   },
+
   "cookies": {
     "title": "Cookie Policy",
     "lastUpdated": "Last updated: December 4, 2024"

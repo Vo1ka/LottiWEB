@@ -1,76 +1,44 @@
 {
-  "nav": {
-    "home": "Inicio",
-    "services": "Servicios",
-    "washModes": "Modos",
-    "reviews": "Reseñas",
-    "contacts": "Contacto",
-    "pricing": "Tarifas",
-    "about": "Sobre nosotros",
-    "faq": "FAQ"
-  },
   "hero": {
-    "title": "Lavandería online en Barcelona",
+    "title": "Lavandería a domicilio en 3 horas en Barcelona",
+    "cta": "Descargar y obtener 30% de descuento",
     "features": [
-      "Recogemos tu ropa en 30 minutos",
-      "La devolvemos limpia en 3 horas",
-      "Precios transparentes desde €3.99/kg",
-      "Seguimiento en tiempo real"
-    ],
-    "cta": "Descargar app"
+      "Recogemos en 30 minutos — devolvemos en 3 horas",
+      "Primer pedido con 30% de descuento",
+      "Seguimiento del repartidor en tiempo real",
+      "Precios transparentes desde €3.99/kg — sin cargos extra"
+    ]
   },
+  
   "services": {
-    "title": "Nuestros servicios",
-    "subtitle": "Todo lo que necesitas para mantener tu ropa impecable",
+    "title": "Por qué 200 barceloneses eligieron Lotti",
+    "subtitle": "Ahorra más de 4 horas cada semana. Confía la colada a profesionales",
     "items": [
       {
-        "title": "Recogida rápida",
-        "description": "Recogemos tu ropa en menos de 30 minutos desde que haces el pedido"
+        "title": "Recogida en 30 minutos",
+        "description": "Haz tu pedido en la app — el repartidor llegará en 30 minutos. Trabajamos de 8:00 a 22:00, los 7 días de la semana"
       },
       {
         "title": "Lavado profesional",
-        "description": "Utilizamos productos de alta calidad y equipos modernos para cada tipo de tejido"
+        "description": "6 modos de lavado para cualquier tejido. Detergentes hipoalergénicos premium. Ropa asegurada al 100%"
       },
       {
-        "title": "Entrega express",
-        "description": "Devolvemos tu ropa limpia y perfectamente doblada en solo 3 horas"
+        "title": "Devolución en 3 horas",
+        "description": "Procesamiento exprés de tu pedido. La ropa vuelve limpia, planchada y cuidadosamente empaquetada"
       }
     ]
   },
-  "testimonials": {
-    "title": "Lo que dicen nuestros clientes",
-    "writeReview": "Dejar reseña",
-    "items": [
-      {
-        "name": "María García",
-        "text": "Servicio increíble. Siempre puntuales y mi ropa queda perfecta. Lo recomiendo 100%.",
-        "usage": "Usa el servicio semanalmente"
-      },
-      {
-        "name": "Carlos Rodríguez",
-        "text": "La mejor decisión para ahorrar tiempo. La app es muy fácil de usar y el servicio impecable.",
-        "usage": "Cliente desde hace 6 meses"
-      },
-      {
-        "name": "Laura Martínez",
-        "text": "Excelente atención al cliente. Tuvieron mucho cuidado con mis prendas delicadas.",
-        "usage": "Usa el servicio mensualmente"
-      },
-      {
-        "name": "David López",
-        "text": "Rápido, profesional y a buen precio. No puedo pedir más. Ahora tengo más tiempo libre.",
-        "usage": "Cliente VIP"
-      }
-    ]
-  },
+
   "washModes": {
-    "title": "Modos de lavado",
-    "subtitle": "Lavamos cualquier tipo de tejido, eligiendo el modo adecuado",
+    "title": "6 modos de lavado para resultados perfectos",
+    "subtitle": "Seleccionamos el modo óptimo para cada tipo de tejido. Desde seda delicada hasta ropa muy sucia",
+    "washLabel": "Lavado",
+    "dryLabel": "Secado",
     "modes": [
       {
         "id": "cold",
         "name": "Frío",
-        "description": "Ropa de color, sintéticos, sin manchas",
+        "description": "Color, sintético, sin encogimiento",
         "temperature": "20°C",
         "spin": "1000 rpm",
         "washTime": "30 min",
@@ -79,7 +47,7 @@
       {
         "id": "delicate",
         "name": "Delicado",
-        "description": "Seda, encaje, ropa blanca",
+        "description": "Seda, encaje, ropa interior",
         "temperature": "20°C",
         "spin": "600 rpm",
         "washTime": "30 min",
@@ -87,8 +55,8 @@
       },
       {
         "id": "warm30",
-        "name": "Templado 30",
-        "description": "Ropa diaria, de color, sintéticos, algodón",
+        "name": "Tibio 30",
+        "description": "Ropa diaria, color, algodón",
         "temperature": "30°C",
         "spin": "1000 rpm",
         "washTime": "30 min",
@@ -96,17 +64,17 @@
       },
       {
         "id": "warm40",
-        "name": "Templado 40",
-        "description": "Ropa de cama, toallas, manchas, algodón",
+        "name": "Tibio 40",
+        "description": "Ropa de cama, toallas, manchas",
         "temperature": "40°C",
         "spin": "1200 rpm",
         "washTime": "30 min",
         "dryTime": "30 min"
       },
       {
-        "id": "noConditioner",
+        "id": "no-conditioner",
         "name": "Sin suavizante",
-        "description": "Ropa deportiva, alergias, toallas",
+        "description": "Ropa deportiva, para alérgicos",
         "temperature": "30°C",
         "spin": "1000 rpm",
         "washTime": "30 min",
@@ -115,7 +83,7 @@
       {
         "id": "hot60",
         "name": "Caliente 60",
-        "description": "Ropa blanca, muy sucia, desinfección",
+        "description": "Ropa blanca, muy sucia",
         "temperature": "60°C",
         "spin": "1200 rpm",
         "washTime": "30 min",
@@ -123,98 +91,174 @@
       }
     ]
   },
+
   "pricing": {
-    "title": "Tarifas",
-    "subtitle": "Precios transparentes sin cargos ocultos",
+    "title": "Tarifas transparentes sin cargos ocultos",
+    "subtitle": "Paga solo por el peso de la ropa. Sin cargos extra por urgencia o fines de semana",
     "perKg": "por kg",
+    "cta": "Descargar app",
     "plans": [
       {
-        "name": "Lavado único",
+        "name": "Probar",
         "price": "5.99",
-        "description": "Perfecto para probar el servicio",
+        "description": "Primer pedido con 30% de descuento",
         "features": [
           "Recogida en 30 minutos",
           "Devolución en 3 horas",
-          "Todos los modos de lavado",
-          "Seguimiento del pedido"
+          "Los 6 modos de lavado",
+          "Seguimiento en tiempo real"
         ]
       },
       {
         "name": "Semanal",
         "price": "4.99",
-        "description": "Opción más popular",
+        "description": "Ahorro del 17% — elección del 68% de clientes",
         "popular": true,
         "features": [
-          "Todo del lavado único",
-          "17% de descuento",
+          "Todo de la tarifa «Probar»",
+          "17% de descuento en cada pedido",
           "Procesamiento prioritario",
-          "Horario flexible"
+          "Horario flexible de recogida"
         ]
       },
       {
         "name": "Mensual",
         "price": "3.99",
-        "description": "Máximo ahorro",
+        "description": "Máximo ahorro — 33% de descuento",
         "features": [
-          "Todo del plan semanal",
-          "33% de descuento",
+          "Todo de la tarifa «Semanal»",
+          "33% de descuento en cada pedido",
           "Gestor personal",
-          "Almacenamiento gratuito"
+          "Almacenamiento gratis hasta 7 días"
         ]
       }
-    ],
-    "cta": "Elegir plan"
+    ]
+  },
+
+  "testimonials": {
+    "title": "Más de 2,800 clientes satisfechos en Barcelona",
+    "writeReview": "Dejar reseña",
+    "items": [
+      {
+        "name": "Liana E.",
+        "text": "¡Servicio increíble! Recogieron en 25 minutos, devolvieron en 3 horas. La ropa huele a frescura, todo perfectamente planchado. Ahora pido cada semana.",
+        "usage": "Usa el servicio semanalmente",
+        "avatar": "/images/testimonials/avatar1.png"
+      },
+      {
+        "name": "Maria G.",
+        "text": "La mejor solución para ahorrar tiempo. La app es muy simple — el pedido se hace en 2 minutos. Los repartidores siempre son amables y puntuales.",
+        "usage": "Cliente desde hace 6 meses",
+        "avatar": "/images/testimonials/avatar2.png"
+      },
+      {
+        "name": "James R.",
+        "text": "Muy cuidadosos con mis prendas delicadas. Las camisas de seda volvieron como nuevas. Excelente atención al cliente — respondieron todas mis preguntas.",
+        "usage": "Usa el servicio mensualmente",
+        "avatar": "/images/testimonials/avatar3.png"
+      },
+      {
+        "name": "Sophia K.",
+        "text": "Rápido, profesional y a precio justo. Ahorro más de 5 horas cada semana. Ahora tengo más tiempo para la familia y hobbies. ¡Lo recomiendo a todos!",
+        "usage": "Cliente VIP",
+        "avatar": "/images/testimonials/avatar4.png"
+      },
+      {
+        "name": "David L.",
+        "text": "App súper simple y servicio impecable. Seguimiento del repartidor en tiempo real — muy conveniente. Precios transparentes, sin cargos ocultos.",
+        "usage": "Usa el servicio mensualmente",
+        "avatar": "/images/testimonials/avatar5.png"
+      }
+    ]
   },
 
   "faq": {
     "title": "Preguntas frecuentes",
     "items": [
       {
-        "question": "¿Cómo funciona el servicio?",
-        "answer": "Haces el pedido a través de la app, el mensajero llega a la hora conveniente, recoge la ropa, la lavamos con productos profesionales y la devolvemos limpia en 3 horas."
+        "question": "¿Cómo funciona el servicio Lotti?",
+        "answer": "1) Descarga la app y haz tu pedido en 2 minutos. 2) El repartidor llegará en 30 minutos y recogerá la ropa. 3) Lavamos profesionalmente tu ropa. 4) En 3 horas el repartidor devolverá la ropa limpia y planchada. Sigue el estado del pedido en tiempo real."
+      },
+      {
+        "question": "¿Cuánto cuesta la entrega?",
+        "answer": "La entrega es completamente gratis para pedidos desde 3 kg. Para pedidos menores de 3 kg — €2.99. Sin cargos extra por urgencia, fines de semana o festivos."
       },
       {
         "question": "¿Qué métodos de pago aceptan?",
-        "answer": "Aceptamos todas las tarjetas bancarias principales (Visa, Mastercard, American Express), Apple Pay, Google Pay y efectivo al recibir."
+        "answer": "Aceptamos todas las tarjetas principales (Visa, Mastercard, American Express), Apple Pay, Google Pay y Bizum. También es posible pagar en efectivo al repartidor."
       },
       {
         "question": "¿Qué tan rápido recogen la ropa?",
-        "answer": "Nos esforzamos por recoger tu ropa dentro de 30 minutos después de hacer el pedido. Puedes seguir la ubicación del mensajero en tiempo real a través de la app."
+        "answer": "Nos esforzamos por recoger tu ropa en 30 minutos después de hacer el pedido. En el 94% de los casos el repartidor llega en 20-25 minutos. Puedes seguir la ubicación del repartidor en tiempo real en la app."
       },
       {
-        "question": "¿Qué pasa si la ropa se daña?",
-        "answer": "Todas las prendas están aseguradas. Si ocurre un daño por nuestra culpa, compensamos el valor total de la prenda según el precio de mercado."
+        "question": "¿Qué pasa si se daña la ropa?",
+        "answer": "Toda la ropa está asegurada al 100% del valor. Si el daño ocurrió por nuestra culpa, compensamos el valor total de mercado de la prenda en 48 horas. En 3 años de trabajo el porcentaje de daños es menos del 0.1%."
       },
       {
         "question": "¿Se puede cancelar el pedido?",
-        "answer": "Sí, puedes cancelar el pedido gratis hasta el momento en que el mensajero recoja tu ropa. Después de la recogida se aplica el costo estándar del servicio."
+        "answer": "Sí, puedes cancelar el pedido gratis hasta el momento en que el repartidor recoja tu ropa. Después de la recogida se aplica el costo estándar del servicio. La cancelación se hace en 1 clic en la app."
       },
       {
-        "question": "¿Trabajan los fines de semana?",
-        "answer": "Sí, trabajamos 7 días a la semana de 8:00 a 22:00, incluyendo días festivos."
+        "question": "¿Trabajan los fines de semana y festivos?",
+        "answer": "Sí, trabajamos los 7 días de la semana de 8:00 a 22:00, incluyendo todos los días festivos. Sin cargos extra por fines de semana y festivos."
+      },
+      {
+        "question": "¿Qué detergentes usan para lavar?",
+        "answer": "Usamos solo detergentes profesionales hipoalergénicos premium. Son seguros para piel sensible y aptos para ropa infantil. Bajo pedido disponibles detergentes eco sin aditivos químicos."
       }
     ]
   },
+
   "finalCta": {
-    "title": "¿Listo para probar?",
-    "subtitle": "Descarga la app y obtén 30% de descuento en tu primer pedido",
-    "downloadApp": "Descargar app",
+    "title": "¿Listo para recuperar más de 4 horas cada semana?",
+    "subtitle": "Descarga la app y obtén 30% de descuento en tu primer pedido. Sin registro de tarjeta",
+    "mockupAlt": "App Lotti para iOS y Android",
     "features": [
-      "Primer pedido con 30% de descuento",
-      "Seguimiento en tiempo real",
-      "Pago conveniente"
+      "30% de descuento en el primer pedido — ahorra hasta €15",
+      "Seguimiento del repartidor en tiempo real",
+      "Pago después de recibir la ropa limpia"
     ]
   },
+
   "footer": {
-    "brand": "Servicio de lavandería profesional con recogida y entrega a domicilio en Barcelona.",
+    "description": "Lavandería profesional con entrega en 3 horas en Barcelona. Más de 2,800 clientes satisfechos. Trabajamos 7 días a la semana de 8:00 a 22:00.",
     "quickLinks": "Enlaces rápidos",
-    "legal": "Legal",
-    "contact": "Contacto",
-    "rights": "Todos los derechos reservados."
+    "legal": {
+      "title": "Legal",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos y Condiciones",
+      "cookies": "Política de Cookies"
+    },
+    "contact": {
+      "title": "Contacto",
+      "location": "Barcelona, España"
+    },
+    "copyright": "Todos los derechos reservados."
   },
+
+
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "washModes": "Modos",
+    "faq": "Preguntas",
+    "reviews": "Reseñas",
+    "contacts": "Contacto",
+    "downloadApp": "Descargar",
+    "download": "Descargar"
+  },
+
   "contacts": {
     "title": "Contáctanos",
-    "subtitle": "¿Tienes preguntas? Estamos siempre disponibles para ayudarte",
+    "subtitle": "¿Tienes preguntas? Respondemos en 15 minutos en horario laboral",
+    "info": {
+      "title": "Información de contacto",
+      "address": "Barcelona, España",
+      "phone": "+34 635 669 900",
+      "email": "info@lotti.com",
+      "hours": "Lun-Dom: 8:00 - 22:00"
+    },
     "form": {
       "title": "Enviar mensaje",
       "name": "Tu nombre",
@@ -222,101 +266,96 @@
       "phone": "Teléfono",
       "message": "Mensaje",
       "submit": "Enviar",
-      "success": "¡Mensaje enviado!",
-      "error": "Error al enviar"
-    },
-    "info": {
-      "title": "Información de contacto",
-      "address": "Barcelona, España",
-      "phone": "+34 XXX XXX XXX",
-      "email": "info@lotti.com",
-      "hours": "Lun-Dom: 8:00 - 22:00"
+      "success": "¡Mensaje enviado! Responderemos en 15 minutos",
+      "error": "Error al enviar. Intenta llamarnos"
     },
     "social": {
-      "title": "Redes sociales"
+      "title": "Síguenos en redes"
     }
   },
+
   "notFound": {
     "title": "Página no encontrada",
     "description": "Lo sentimos, la página que buscas no existe o ha sido movida.",
     "backHome": "Volver al inicio"
   },
+
   "privacy": {
     "title": "Política de Privacidad",
     "lastUpdated": "Última actualización: 4 de diciembre de 2024",
-    "intro": "En Lotti, respetamos su privacidad y nos comprometemos a proteger sus datos personales.",
+    "intro": "En Lotti respetamos tu privacidad y nos comprometemos a proteger tus datos personales de acuerdo con el GDPR.",
     "section1": {
       "title": "1. Información que recopilamos",
-      "intro": "En Lotti, recopilamos la siguiente información personal cuando utiliza nuestros servicios:",
+      "intro": "En Lotti recopilamos la siguiente información personal al usar nuestros servicios:",
       "items": [
-        "Nombre completo y datos de contacto (dirección de email, número de teléfono)",
+        "Nombre completo y datos de contacto (dirección de correo electrónico, número de teléfono)",
         "Dirección de recogida y entrega",
         "Información de pago y facturación",
-        "Historial de pedidos y preferencias de servicio",
-        "Datos de navegación y uso de la aplicación/sitio web"
+        "Historial de pedidos y preferencias de servicios",
+        "Datos de navegación y uso de la app/sitio web"
       ]
     },
     "section2": {
-      "title": "2. Cómo utilizamos su información",
-      "intro": "Utilizamos la información recopilada para:",
+      "title": "2. Cómo usamos tu información",
+      "intro": "Usamos la información recopilada para:",
       "items": [
-        "Procesar y gestionar sus pedidos de lavandería",
-        "Comunicarnos con usted sobre el estado de su pedido",
+        "Procesar y gestionar tus pedidos de lavandería",
+        "Comunicarnos contigo sobre el estado del pedido",
         "Procesar pagos y prevenir fraudes",
         "Mejorar nuestros servicios y experiencia de usuario",
-        "Enviar comunicaciones de marketing (con su consentimiento)",
-        "Cumplir con obligaciones legales y regulatorias"
+        "Enviar comunicaciones de marketing (con tu consentimiento)",
+        "Cumplir con obligaciones legales y normativas"
       ]
     },
     "section3": {
-      "title": "3. Base legal para el tratamiento",
-      "intro": "Procesamos sus datos personales bajo las siguientes bases legales:",
-      "contract": "Ejecución del contrato: Para proporcionar los servicios que ha solicitado",
-      "consent": "Consentimiento: Para comunicaciones de marketing y cookies no esenciales",
+      "title": "3. Base legal para el procesamiento",
+      "intro": "Procesamos tus datos personales bajo las siguientes bases legales:",
+      "consent": "Consentimiento: Para comunicaciones de marketing y cookies opcionales",
+      "contract": "Ejecución del contrato: Para proporcionar los servicios solicitados",
       "legitimate": "Interés legítimo: Para mejorar nuestros servicios y prevenir fraudes",
       "legal": "Obligación legal: Para cumplir con requisitos legales y fiscales"
     },
     "section4": {
       "title": "4. Compartir información con terceros",
-      "intro": "Podemos compartir su información con:",
-      "providers": "Proveedores de servicios: Procesadores de pago, servicios de mensajería, hosting",
-      "partners": "Socios logísticos: Para coordinar la recogida y entrega",
+      "intro": "Podemos compartir tu información con:",
+      "providers": "Proveedores de servicios: Procesadores de pagos, servicios de entrega, hosting",
+      "partners": "Socios logísticos: Para coordinar recogida y entrega",
       "authorities": "Autoridades: Cuando sea requerido por ley",
-      "noSale": "Nunca vendemos su información personal a terceros."
+      "noSale": "Nunca vendemos tu información personal a terceros."
     },
     "section5": {
-      "title": "5. Seguridad de los datos",
-      "intro": "Implementamos medidas técnicas y organizativas apropiadas para proteger su información personal:",
+      "title": "5. Seguridad de datos",
+      "intro": "Aplicamos medidas técnicas y organizativas apropiadas para proteger tu información personal:",
       "items": [
         "Cifrado SSL/TLS para transmisión de datos",
         "Almacenamiento seguro en servidores protegidos",
-        "Acceso restringido solo a personal autorizado",
+        "Acceso limitado solo para personal autorizado",
         "Auditorías de seguridad regulares"
       ]
     },
     "section6": {
-      "title": "6. Sus derechos",
-      "intro": "Bajo el RGPD, usted tiene los siguientes derechos:",
-      "access": "Acceso: Solicitar una copia de sus datos personales",
+      "title": "6. Tus derechos",
+      "intro": "De acuerdo con el GDPR, tienes los siguientes derechos:",
+      "access": "Acceso: Solicitar copia de tus datos personales",
       "rectification": "Rectificación: Corregir datos inexactos o incompletos",
-      "erasure": "Supresión: Solicitar la eliminación de sus datos",
-      "restriction": "Limitación: Restringir el procesamiento de sus datos",
-      "portability": "Portabilidad: Recibir sus datos en formato estructurado",
-      "objection": "Oposición: Oponerse al procesamiento de sus datos",
+      "erasure": "Supresión: Solicitar eliminación de tus datos",
+      "restriction": "Restricción: Limitar el procesamiento de tus datos",
+      "portability": "Portabilidad: Obtener tus datos en formato estructurado",
+      "objection": "Oposición: Oponerte al procesamiento de tus datos",
       "withdraw": "Retirar consentimiento: En cualquier momento",
-      "contact": "Para ejercer estos derechos, contáctenos en:"
+      "contact": "Para ejercer estos derechos contáctanos: privacy@lotti.com"
     },
     "section7": {
       "title": "7. Retención de datos",
-      "intro": "Conservamos su información personal solo durante el tiempo necesario:",
-      "account": "Datos de cuenta: Mientras su cuenta esté activa",
+      "intro": "Conservamos tu información personal solo durante el tiempo necesario:",
+      "account": "Datos de cuenta: Mientras tu cuenta esté activa",
       "transactions": "Datos de transacciones: 6 años (requisitos fiscales)",
-      "marketing": "Datos de marketing: Hasta que retire su consentimiento",
+      "marketing": "Datos de marketing: Hasta que retires tu consentimiento",
       "cookies": "Datos de cookies: Según nuestra Política de Cookies"
     },
     "section8": {
       "title": "8. Transferencias internacionales",
-      "intro": "Sus datos pueden ser transferidos fuera del EEE con garantías adecuadas:",
+      "intro": "Tus datos pueden transferirse fuera del EEE con garantías apropiadas:",
       "items": [
         "Cláusulas contractuales estándar aprobadas por la UE",
         "Certificación Privacy Shield UE-EE.UU.",
@@ -325,26 +364,36 @@
     },
     "section9": {
       "title": "9. Menores de edad",
-      "content": "No recopilamos intencionalmente información de menores de 18 años."
+      "content": "No recopilamos intencionalmente información de personas menores de 18 años."
     },
     "section10": {
       "title": "10. Cookies",
-      "content": "Utilizamos cookies para mejorar su experiencia. Ver nuestra",
+      "content": "Usamos cookies para mejorar tu experiencia. Ver nuestra",
       "link": "Política de Cookies"
     },
     "section11": {
       "title": "11. Cambios en esta política",
-      "content": "Podemos actualizar esta política periódicamente. Le notificaremos de cambios significativos."
+      "content": "Podemos actualizar periódicamente esta política. Te notificaremos sobre cambios sustanciales por email con 30 días de antelación antes de que entren en vigor."
     },
     "section12": {
       "title": "12. Contacto",
-      "intro": "Para preguntas sobre esta política, contáctenos:",
+      "intro": "Para cuestiones sobre esta política contáctanos:",
       "company": "Lotti Lavandería",
-      "email": "Email:",
-      "phone": "Teléfono:",
       "address": "Dirección:",
       "location": "Barcelona, España",
-      "complaint": "Puede presentar reclamación ante la AEPD:"
+      "email": "Email: privacy@lotti.com",
+      "phone": "Teléfono: +34 635 669 900",
+      "complaint": "Puedes presentar una queja ante la Agencia Española de Protección de Datos (AEPD): www.aepd.es"
     }
+  },
+
+  "terms": {
+    "title": "Términos y Condiciones",
+    "lastUpdated": "Última actualización: 4 de diciembre de 2024"
+  },
+
+  "cookies": {
+    "title": "Política de Cookies",
+    "lastUpdated": "Última actualización: 4 de diciembre de 2024"
   }
 }

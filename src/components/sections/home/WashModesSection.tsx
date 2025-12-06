@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useTranslations } from 'next-intl';
 
@@ -16,98 +16,119 @@ export function WashModesSection() {
   const t = useTranslations('washModes');
   const modes: WashMode[] = t.raw('modes') || [];
 
-  // Чередование: верх, низ, верх, низ, верх, низ
+  // Порядок для десктопа: чередование низ/верх
   const timeline = [
-    { mode: modes[0], position: 'top' },    // Холодный
-    { mode: modes[1], position: 'bottom' }, // Деликатный
-    { mode: modes[2], position: 'top' },    // Тёплый 30
-    { mode: modes[3], position: 'bottom' }, // Тёплый 40
-    { mode: modes[4], position: 'top' },    // Без кондиционера
-    { mode: modes[5], position: 'bottom' }, // Горячий 60
+    { mode: modes[1], position: 'bottom' as const }, // Деликатный
+    { mode: modes[0], position: 'top' as const },    // Холодный
+    { mode: modes[2], position: 'bottom' as const }, // Тёплый 30
+    { mode: modes[3], position: 'top' as const },    // Тёплый 40
+    { mode: modes[5], position: 'bottom' as const }, // Горячий 60
+    { mode: modes[4], position: 'top' as const },    // Без кондиционера
   ];
 
   return (
-    <section id="modos" className="py-20 lg:py-28 bg-[#f5f5f5]">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="modos" className="py-12 md:py-20 lg:py-28 bg-white">
+      <div className="section-wrapper">
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
-          <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-8 md:mb-16 lg:mb-20">
+          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-serif text-gray-900 mb-4 md:mb-6">
             {t('title')}
           </h2>
-          <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+          <p className="text-[15px] md:text-base lg:text-lg text-gray-700 leading-relaxed px-4 md:px-0">
             {t('subtitle')}
           </p>
         </div>
 
         {/* Timeline */}
         <div className="max-w-7xl mx-auto">
-          {/* Mobile View - Stack */}
-          <div className="lg:hidden space-y-8">
+          {/* Mobile View - Cards */}
+          <div className="lg:hidden space-y-4 px-2">
             {modes.map((mode) => (
-              <div key={mode.id} className="space-y-3">
-                <h3 className="text-2xl font-serif text-gray-900">
-                  {mode.name}
-                </h3>
-                <p className="text-base text-gray-700">
-                  {mode.description}
-                </p>
-                <p className="text-base text-gray-900">
-                  {mode.temperature} {mode.spin}
-                </p>
-                <div className="space-y-1 text-base text-gray-700">
-                  <p>Стирка: {mode.washTime}</p>
-                  <p>Сушка: {mode.dryTime}</p>
+              <div 
+                key={mode.id} 
+                className="bg-[#E8F4F8] rounded-2xl p-5 flex justify-between items-start gap-4"
+              >
+                {/* Left Content */}
+                <div className="flex-1 space-y-1">
+                  <h3 className="text-lg font-serif font-semibold text-gray-900">
+                    {mode.name}
+                  </h3>
+                  <p className="text-sm text-gray-700">
+                    {mode.temperature} {mode.spin}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {mode.description}
+                  </p>
+                </div>
+
+                {/* Right Content - Times */}
+                <div className="text-right text-sm text-gray-700 space-y-1 flex-shrink-0">
+                  <p>{t('washLabel')}: {mode.washTime}</p>
+                  <p>{t('dryLabel')}: {mode.dryTime}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Desktop View - Timeline */}
-          <div className="hidden lg:block relative" style={{ minHeight: '600px' }}>
+          <div className="hidden lg:block relative" style={{ minHeight: '420px' }}>
             {/* Horizontal Line */}
-            <div className="absolute left-0 right-0 h-px bg-[#c0dce8]" style={{ top: '300px' }} />
+            <div 
+              className="absolute left-0 right-0 bg-[#A8D5E2]" 
+              style={{ 
+                top: '200px',
+                height: '2px'
+              }} 
+            />
 
             {/* Grid */}
-            <div className="grid grid-cols-6 gap-8">
-              {timeline.map((item, index) => (
+            <div className="grid grid-cols-6 gap-6">
+              {timeline.map((item) => (
                 <div key={item.mode.id} className="relative">
                   {/* Vertical Line */}
                   <div
-                    className={`absolute left-1/2 transform -translate-x-1/2 w-px bg-[#c0dce8]`}
+                    className="absolute bg-[#A8D5E2]"
                     style={{
-                      top: item.position === 'top' ? '300px' : '0',
-                      height: item.position === 'top' ? '100px' : '300px',
+                      width: '2px',
+                      left: '0',
+                      top: item.position === 'top' ? '80px' : '200px',
+                      height: '120px',
                     }}
                   />
 
                   {/* Dot */}
                   <div
-                    className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-[#d4e8f0] border-2 border-[#5a9fb8] shadow-sm z-10"
-                    style={{ top: '300px' }}
+                    className="absolute w-5 h-5 rounded-full bg-[#A8D5E2] border-2 border-white shadow-sm z-10"
+                    style={{ 
+                      top: '191px',
+                      left: '-8px'
+                    }}
                   />
 
                   {/* Content */}
                   <div
-                    className="space-y-3 px-2"
+                    className="space-y-2"
                     style={{
                       position: 'absolute',
-                      top: item.position === 'top' ? '0' : '420px',
+                      top: item.position === 'top' ? '20px' : '240px',
                       left: '0',
                       right: '0',
+                      paddingLeft: '20px',
+                      textAlign: 'left',
                     }}
                   >
-                    <h3 className="text-xl font-serif text-gray-900 leading-tight">
+                    <h3 className="text-lg font-serif text-gray-900 leading-tight">
                       {item.mode.name}
                     </h3>
-                    <p className="text-sm text-gray-700 leading-snug">
+                    <p className="text-sm text-gray-600 leading-snug">
                       {item.mode.description}
                     </p>
                     <p className="text-sm text-gray-900">
                       {item.mode.temperature} {item.mode.spin}
                     </p>
-                    <div className="space-y-1 text-sm text-gray-700">
-                      <p>Стирка: {item.mode.washTime}</p>
-                      <p>Сушка: {item.mode.dryTime}</p>
+                    <div className="space-y-0.5 text-sm text-gray-700">
+                      <p>{t('washLabel')}: {item.mode.washTime}</p>
+                      <p>{t('dryLabel')}: {item.mode.dryTime}</p>
                     </div>
                   </div>
                 </div>

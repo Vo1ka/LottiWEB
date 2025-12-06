@@ -48,27 +48,61 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  }
+  
+  .font-serif {
+    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  }
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+@layer components {
+  .section-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .section-wrapper {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .section-wrapper {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-wrapper {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
 }
 
-.font-serif {
-  font-family: 'Cormorant Garamond', serif;
-}
+/* ========================================
+   BUBBLE ANIMATIONS - вне @layer
+   ======================================== */
 
-/* src/app/globals.css */
-
-/* ============================================
-   BUBBLE ANIMATIONS
-   ============================================ */
-
-/* Базовый стиль пузырей */
 .bubble {
   position: absolute;
   border-radius: 50%;
@@ -198,7 +232,6 @@ body {
   animation-delay: 5.5s;
 }
 
-
 /* Анимация всплытия с покачиванием */
 @keyframes float {
   0% {
@@ -235,7 +268,6 @@ body {
   }
 }
 
-
 /* Медленная пульсация для градиентных пятен */
 @keyframes pulse-slow {
   0%, 100% {
@@ -252,25 +284,10 @@ body {
   animation: pulse-slow 8s ease-in-out infinite;
 }
 
-/* Медленная анимация bounce для эмодзи */
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 3s ease-in-out infinite;
-}
-
 /* Оптимизация производительности */
 @media (prefers-reduced-motion: reduce) {
   .bubble,
-  .animate-pulse-slow,
-  .animate-bounce-slow {
+  .animate-pulse-slow {
     animation: none;
     opacity: 0.3;
   }
@@ -282,97 +299,6 @@ body {
   .bubble-8,
   .bubble-11,
   .bubble-12 {
-    display: none;
-  }
-}
-  
-/* ============================================
-   PRICING SECTION ANIMATIONS
-   ============================================ */
-
-/* Искры (звёздочки) */
-.sparkle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: radial-gradient(circle, 
-    rgba(168, 213, 226, 0.8) 0%, 
-    rgba(232, 180, 217, 0.6) 50%, 
-    transparent 100%
-  );
-  border-radius: 50%;
-  animation: sparkle-float linear infinite;
-  opacity: 0;
-  box-shadow: 0 0 10px rgba(168, 213, 226, 0.5);
-}
-
-.sparkle-1 {
-  left: 10%;
-  top: 20%;
-  animation-duration: 8s;
-  animation-delay: 0s;
-}
-
-.sparkle-2 {
-  left: 80%;
-  top: 30%;
-  animation-duration: 10s;
-  animation-delay: 2s;
-}
-
-.sparkle-3 {
-  left: 30%;
-  top: 70%;
-  animation-duration: 12s;
-  animation-delay: 4s;
-}
-
-.sparkle-4 {
-  left: 70%;
-  top: 60%;
-  animation-duration: 9s;
-  animation-delay: 1s;
-}
-
-.sparkle-5 {
-  left: 50%;
-  top: 40%;
-  animation-duration: 11s;
-  animation-delay: 3s;
-}
-
-.sparkle-6 {
-  left: 90%;
-  top: 80%;
-  animation-duration: 13s;
-  animation-delay: 5s;
-}
-
-/* Анимация искр */
-@keyframes sparkle-float {
-  0% {
-    transform: translateY(0) scale(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(-10px) scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(-30px) scale(1.5);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-50px) scale(0.5);
-  }
-}
-
-/* Для мобильных - меньше искр */
-@media (max-width: 768px) {
-  .sparkle-4,
-  .sparkle-5,
-  .sparkle-6 {
     display: none;
   }
 }

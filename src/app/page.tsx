@@ -1,7 +1,6 @@
 import { HeroSection } from '@/components/sections/home/HeroSection';
 import { ServicesSection } from '@/components/sections/home/ServicesSection';
 import { WashModesSection } from '@/components/sections/home/WashModesSection';
-import { PricingSection } from '@/components/sections/home/PricingSection';
 import { TestimonialsSection } from '@/components/sections/home/TestimonialsSection';
 import { FAQSection } from '@/components/sections/home/FAQSection';
 import { FinalCTASection } from '@/components/sections/home/FinalCTASection';
@@ -45,7 +44,6 @@ export default async function HomePage({ params }: LocalePageProps) {
         <HeroSection />
         <ServicesSection />
         <WashModesSection />
-        <PricingSection />
         <TestimonialsSection />
         <FAQSection />
         <FinalCTASection />
