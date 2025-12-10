@@ -1,4 +1,3 @@
-/* src/app/globals.css */
 @import 'tailwindcss';
 
 @theme {
@@ -55,15 +54,24 @@
   
   body {
     @apply antialiased;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    /* SF Pro Rounded как основной шрифт */
+    font-family: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
+  /* Cormorant Garamond для заголовков */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-cormorant), 'Cormorant', Georgia, serif;
+    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   }
   
   .font-serif {
-    font-family: var(--font-cormorant), 'Cormorant', Georgia, serif;
+    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  }
+  
+  /* Явно указываем SF Pro Rounded для body текста */
+  .font-sans {
+    font-family: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   }
 }
 

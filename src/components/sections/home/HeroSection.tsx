@@ -50,19 +50,19 @@ export function HeroSection() {
             </a>
           </div>
         </div>
+      </div>
 
-        {/* Illustration */}
-        <div className="relative w-full max-w-6xl mx-auto">
-          <div className="relative w-full h-[350px] md:h-[450px] lg:h-[550px] rounded-b-[40px] lg:rounded-b-[60px] overflow-hidden">
-            <Image
-              src="/images/hero-illustration.png"
-              alt="Lotti Barcelona Laundry Service"
-              fill
-              className="object-cover object-center"
-              priority
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-            />
-          </div>
+      {/* Illustration - Full Width */}
+      <div className="relative w-full">
+        <div className="relative w-full h-[350px] md:h-[450px] lg:h-[550px]">
+          <Image
+            src="/images/hero-illustration.png"
+            alt="Lotti Barcelona Laundry Service"
+            fill
+            className="object-contain object-bottom"
+            priority
+            sizes="100vw"
+          />
         </div>
       </div>
     </section>
