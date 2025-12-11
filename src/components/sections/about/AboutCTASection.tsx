@@ -78,7 +78,7 @@ export function AboutCTASection() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-[280px] h-[560px] md:w-[360px] md:h-[720px] lg:w-[400px] lg:h-[800px]">
               <Image
-                src="/images/AppPreview.png"
+                src="/images/Mockup.png"
                 alt={'Lotti App'}
                 fill
                 className="object-contain drop-shadow-2xl"
