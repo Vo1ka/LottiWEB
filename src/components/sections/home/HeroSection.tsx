@@ -8,23 +8,18 @@ export function HeroSection() {
 
   return (
     <section className="relative bg-white pt-0 pb-0 overflow-hidden">
-      {/* Banner Image - Full Width at Top */}
       <div className="relative w-full">
-  <div className="relative w-full h-[360px] md:h-[440px] lg:h-[520px] bg-[#B8E6F5] overflow-hidden rounded-b-[40px] md:rounded-b-[60px] lg:rounded-b-[80px]">
-    <Image
-      src="/images/lotti-barcelona.png"
-      alt="Lotti Barcelona"
-      fill
-      className="object-cover object-top"
-      priority
-      sizes="100vw"
-    />
-  </div>
-</div>
-
-
-
-
+        <div className="relative w-full aspect-[21/9] md:aspect-[24/9] lg:aspect-[28/9] bg-[#B8E6F5] overflow-hidden rounded-b-[40px] md:rounded-b-[60px] lg:rounded-b-[80px]">
+          <Image
+            src="/images/lotti-barcelona.png"
+            alt="Lotti Barcelona"
+            fill
+            className="object-contain object-center"
+            priority
+            sizes="100vw"
+          />
+        </div>
+      </div>
 
       {/* Animated Background Bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ top: '420px' }}>
