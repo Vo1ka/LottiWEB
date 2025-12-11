@@ -4,12 +4,15 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 
 const nextConfig: NextConfig = {
+  output: 'export', 
+  trailingSlash: true, // Для корректных путей
   /* config options */
   reactCompiler: true,
   
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [],
+    unoptimized: true
   },
   
   async headers() {
