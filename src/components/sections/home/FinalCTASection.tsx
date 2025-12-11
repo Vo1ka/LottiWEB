@@ -38,7 +38,7 @@ export function FinalCTASection() {
                     <li key={index} className="flex items-center gap-3 lg:gap-4">
                       <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 relative">
                         <Image
-                          src="/images/icons/Tick.png"
+                          src="/images/icons/Tick.svg"
                           alt=""
                           fill
                           className="object-contain"
@@ -54,22 +54,16 @@ export function FinalCTASection() {
 
                 {/* App Store Buttons */}
                 <div className="flex flex-row gap-2 md:gap-3 lg:gap-4 pt-1 md:pt-2">
-                  <a
-                    href={appLinks.ios}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-5 md:px-8 py-2.5 md:py-3 bg-white text-gray-900 rounded-full border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors text-sm md:text-base lg:text-lg font-serif"
-                  >
-                    App Store
-                  </a>
-                  <a
-                    href={appLinks.android}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-5 md:px-8 py-2.5 md:py-3 bg-white text-gray-900 rounded-full border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors text-sm md:text-base lg:text-lg font-serif"
-                  >
-                    Android
-                  </a>
+                  <div className="pt-6 lg:pt-8">
+                    <a
+                      href="https://lotti.delivery/download/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-10 py-3 text-base lg:text-lg font-bold text-white bg-[#70CCFF] rounded-full hover:bg-[#5CB8E6] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                    >
+                      {t('cta')}
+                    </a>
+                  </div>
                 </div>
               </div>
 

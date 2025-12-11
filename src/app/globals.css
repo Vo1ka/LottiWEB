@@ -1,5 +1,29 @@
 @import 'tailwindcss';
 
+/* ========================================
+   SF PRO ROUNDED - Локальные шрифты
+   ======================================== */
+
+@font-face {
+  font-family: 'SF Pro Rounded';
+  src: url('/fonts/sf-pro-rounded/SF-Pro-Rounded-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Rounded';
+  src: url('/fonts/sf-pro-rounded/SF-Pro-Rounded-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================================
+   THEME COLORS
+   ======================================== */
+
 @theme {
   --color-background: 0 0% 100%;
   --color-foreground: 222.2 84% 4.9%;
@@ -47,6 +71,10 @@
   }
 }
 
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -54,26 +82,39 @@
   
   body {
     @apply antialiased;
-    /* SF Pro Rounded как основной шрифт */
-    font-family: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Cormorant Garamond для заголовков */
+  /* SF Pro Rounded Bold для всех заголовков */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+    font-family: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 700;
   }
   
+  /* Утилиты для явного указания веса шрифта */
+  .font-regular {
+    font-family: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  .font-bold {
+    font-family: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Переопределяем font-serif на SF Pro Rounded Bold */
   .font-serif {
-    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
-  }
-  
-  /* Явно указываем SF Pro Rounded для body текста */
-  .font-sans {
-    font-family: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 700;
   }
 }
+
+/* ========================================
+   COMPONENTS
+   ======================================== */
 
 @layer components {
   .section-wrapper {
@@ -104,6 +145,22 @@
       padding-left: 100px;
       padding-right: 100px;
     }
+  }
+  
+  /* Акцентная кнопка с цветом #70CCFF */
+  .btn-accent {
+    background-color: #70CCFF;
+    color: white;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 0.75rem 3rem;
+    transition: all 0.2s;
+  }
+  
+  .btn-accent:hover {
+    background-color: #5CB8E6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(112, 204, 255, 0.3);
   }
 }
 

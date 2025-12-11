@@ -1,7 +1,8 @@
+// src/components/sections/home/TestimonialsSection.tsx
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
@@ -10,6 +11,7 @@ interface Testimonial {
   text: string;
   usage: string;
   avatar: string;
+  rating: number;
 }
 
 export function TestimonialsSection() {
@@ -73,12 +75,12 @@ export function TestimonialsSection() {
       <div className="section-wrapper">
         {/* Header with Navigation */}
         <div className="flex items-end justify-between mb-8 md:mb-16 lg:mb-20">
-          {/* Title - always left, 2 lines */}
-          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-serif text-gray-900 whitespace-pre-line leading-tight">
+          {/* Title - SF Pro Rounded Bold */}
+          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-bold text-gray-900 whitespace-pre-line leading-tight">
             {t('title')}
           </h2>
 
-          {/* Navigation Arrows - right side, aligned to bottom */}
+          {/* Navigation Arrows */}
           <div className="flex items-center gap-2 md:gap-4">
             <button
               onClick={prevSlide}
@@ -119,20 +121,34 @@ export function TestimonialsSection() {
                   {/* Quote Icon */}
                   <div className="mb-4 md:mb-6">
                     <Quote
-                      className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[#d4e8f0]"
+                      className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[#70CCFF]"
                       strokeWidth={1.5}
                     />
                   </div>
 
-                  {/* Text - полный текст */}
-                  <p className="text-[15px] md:text-sm lg:text-base text-gray-700 leading-relaxed font-serif flex-grow mb-6">
+                  {/* Rating Stars */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-4 w-4 md:h-5 md:w-5 ${
+                          i < (testimonial.rating || 5)
+                            ? 'fill-[#70CCFF] text-[#70CCFF]'
+                            : 'fill-gray-300 text-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Text - SF Pro Rounded Regular */}
+                  <p className="text-[15px] md:text-sm lg:text-base text-gray-700 leading-relaxed font-regular flex-grow mb-6">
                     "{testimonial.text}"
                   </p>
 
                   {/* Author Section */}
                   <div className="border-t border-gray-200 pt-4 md:pt-6">
                     <div className="flex flex-col items-center text-center">
-                      <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full mb-3 md:mb-4 overflow-hidden relative">
+                      <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full mb-3 md:mb-4 overflow-hidden relative bg-[#d4e8f0]">
                         <Image
                           src={testimonial.avatar}
                           alt={testimonial.name}
@@ -140,10 +156,10 @@ export function TestimonialsSection() {
                           className="object-cover"
                         />
                       </div>
-                      <p className="font-serif text-base md:text-base lg:text-lg text-gray-900 mb-0.5 md:mb-1">
+                      <p className="font-bold text-base md:text-base lg:text-lg text-gray-900 mb-0.5 md:mb-1">
                         {testimonial.name}
                       </p>
-                      <p className="text-xs md:text-xs lg:text-sm text-gray-500">
+                      <p className="text-xs md:text-xs lg:text-sm text-gray-500 font-regular">
                         {testimonial.usage}
                       </p>
                     </div>
@@ -163,7 +179,7 @@ export function TestimonialsSection() {
                 onClick={() => setCurrentIndex(index)}
                 className={`h-2 rounded-full transition-all ${
                   index === currentIndex
-                    ? 'bg-[#5a9fb8] w-6 md:w-8'
+                    ? 'bg-[#70CCFF] w-6 md:w-8'
                     : 'bg-gray-300 hover:bg-gray-400 w-2'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -172,11 +188,19 @@ export function TestimonialsSection() {
           </div>
         )}
 
-        {/* CTA Button */}
+        {/* CTA Button - Now Clickable with new color */}
         <div className="text-center">
-          <button className="inline-flex items-center justify-center px-8 md:px-10 py-3 text-base lg:text-lg font-serif text-gray-900 bg-white rounded-full hover:bg-gray-50 transition-colors shadow-sm">
+          <a
+            href="https://lotti.delivery/download/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 md:px-10 py-3 text-base lg:text-lg font-bold text-white bg-[#70CCFF] rounded-full hover:bg-[#5CB8E6] transition-all hover:shadow-lg hover:-translate-y-0.5"
+          >
             {t('writeReview')}
-          </button>
+          </a>
+          <p className="mt-4 text-sm font-regular text-gray-600">
+            Оставьте отзыв в App Store или Google Play
+          </p>
         </div>
       </div>
     </section>
