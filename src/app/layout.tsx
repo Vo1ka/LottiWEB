@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Lotti - Lavandería Online',
-  description: 'Servicio de lavandería profesional con recogida y entrega a domicilio',
+  title: 'Lotti - Lavandería Online Barcelona',
+  description: 'Servicio de lavandería profesional con recogida y entrega a domicilio en Barcelona',
 };
 
 export default function RootLayout({
@@ -10,5 +11,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <html lang="es">
+      <body className="antialiased">
+        {children}
+      </body>
+    </html>
+  );
 }

@@ -26,7 +26,7 @@ export function AboutCTASection() {
             <div className="grid grid-cols-3 gap-6 py-8">
               <div className="text-center">
                 <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
-                  10K+
+                  2K+
                 </div>
                 <div className="text-sm lg:text-base text-white/80 font-regular">
                   Клиентов
@@ -34,7 +34,7 @@ export function AboutCTASection() {
               </div>
               <div className="text-center">
                 <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
-                  50K+
+                  500+
                 </div>
                 <div className="text-sm lg:text-base text-white/80 font-regular">
                   Заказов

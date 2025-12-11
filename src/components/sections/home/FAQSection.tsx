@@ -20,7 +20,7 @@ export function FAQSection() {
       <div className="section-wrapper">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
-          <h2 className="text-[36px] font-serif font-medium text-gray-900">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
             {t('title')}
           </h2>
         </div>
@@ -36,7 +36,7 @@ export function FAQSection() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full px-6 lg:px-8 py-5 lg:py-6 flex items-center justify-between text-left transition-colors"
               >
-                <span className="text-lg lg:text-xl font-serif text-gray-900 pr-8 leading-tight">
+                <span className="text-lg lg:text-xl font-bold text-gray-900 pr-8 leading-tight">
                   {item.question}
                 </span>
                 <ChevronDown
@@ -54,7 +54,7 @@ export function FAQSection() {
                 )}
               >
                 <div className="px-6 lg:px-8 pb-5 lg:pb-6">
-                  <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                  <p className="text-base lg:text-lg font-regular text-gray-700 leading-relaxed">
                     {item.answer}
                   </p>
                 </div>

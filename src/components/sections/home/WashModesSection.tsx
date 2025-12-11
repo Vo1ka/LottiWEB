@@ -1,3 +1,4 @@
+// src/components/sections/home/WashModesSection.tsx
 'use client';
 
 import { useTranslations } from 'next-intl';
@@ -31,10 +32,10 @@ export function WashModesSection() {
       <div className="section-wrapper">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-8 md:mb-16 lg:mb-20">
-          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-serif text-gray-900 mb-4 md:mb-6 whitespace-pre-line">
+          <h2 className="text-[28px] md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6 whitespace-pre-line">
             {t('title')}
           </h2>
-          <p className="text-[15px] md:text-base lg:text-lg text-gray-700 leading-relaxed px-4 md:px-0 whitespace-pre-line">
+          <p className="text-[15px] md:text-base lg:text-lg text-gray-700 leading-relaxed px-4 md:px-0 whitespace-pre-line font-regular">
             {t('subtitle')}
           </p>
         </div>
@@ -50,19 +51,19 @@ export function WashModesSection() {
               >
                 {/* Left Content */}
                 <div className="flex-1 space-y-1">
-                  <h3 className="text-lg font-serif font-semibold text-gray-900">
+                  <h3 className="text-lg font-bold text-gray-900">
                     {mode.name}
                   </h3>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm font-regular text-gray-700">
                     {mode.temperature} {mode.spin}
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm font-regular text-gray-600">
                     {mode.description}
                   </p>
                 </div>
 
                 {/* Right Content - Times */}
-                <div className="text-right text-sm text-gray-700 space-y-1 flex-shrink-0">
+                <div className="text-right text-sm font-regular text-gray-700 space-y-1 flex-shrink-0">
                   <p>{t('washLabel')}: {mode.washTime}</p>
                   <p>{t('dryLabel')}: {mode.dryTime}</p>
                 </div>
@@ -117,16 +118,16 @@ export function WashModesSection() {
                       textAlign: 'left',
                     }}
                   >
-                    <h3 className="text-lg font-serif text-gray-900 leading-tight">
+                    <h3 className="text-lg font-bold text-gray-900 leading-tight">
                       {item.mode.name}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-snug">
+                    <p className="text-sm font-regular text-gray-600 leading-snug">
                       {item.mode.description}
                     </p>
-                    <p className="text-sm text-gray-900">
+                                        <p className="text-sm font-regular text-gray-900">
                       {item.mode.temperature} {item.mode.spin}
                     </p>
-                    <div className="space-y-0.5 text-sm text-gray-700">
+                    <div className="space-y-0.5 text-sm font-regular text-gray-700">
                       <p>{t('washLabel')}: {item.mode.washTime}</p>
                       <p>{t('dryLabel')}: {item.mode.dryTime}</p>
                     </div>
@@ -140,3 +141,4 @@ export function WashModesSection() {
     </section>
   );
 }
+

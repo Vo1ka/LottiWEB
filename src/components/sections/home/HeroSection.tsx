@@ -81,20 +81,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* Illustration - Moved to Bottom */}
-      <div className="relative w-full">
-        <div className="relative w-full h-[350px] md:h-[450px] lg:h-[550px]">
-          <Image
-            src="/images/hero-illustration.png"
-            alt="Lotti Barcelona Laundry Service"
-            fill
-            className="object-contain object-bottom"
-            priority
-            sizes="100vw"
-          />
-        </div>
-      </div>
     </section>
   );
 }

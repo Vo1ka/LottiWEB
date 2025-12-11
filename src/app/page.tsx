@@ -9,7 +9,6 @@ import { Footer } from '@/components/layout/Footer';
 import { Metadata } from 'next';
 import { LocalePageProps } from '@/types/pages';
 
-// отключает статический рендеринг
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
