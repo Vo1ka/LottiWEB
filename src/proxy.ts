@@ -5,7 +5,7 @@ import { locales, defaultLocale, countryToLocale, Locale } from './i18n';
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
-  localePrefix: 'as-needed',
+  localePrefix: 'always',
 });
 
 export default function proxy(request: NextRequest) {

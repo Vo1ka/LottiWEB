@@ -295,6 +295,7 @@
       "title": "Social Media"
     }
   },
+
   "footer": {
     "description": "Professional laundry with 3-hour delivery in Barcelona. Over 2,800 satisfied customers. We work 7 days a week from 9:00 to 21:00.",
     "quickLinks": "Quick Links",
@@ -308,7 +309,9 @@
       "terms": "Terms and Conditions",
       "cookies": "Cookie Policy"
     },
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "serviceAreas": "Service areas: Barcelona, Eixample, Gràcia, Sarrià, Sant Gervasi"
+
   },
   "notFound": {
     "title": "Page Not Found",
@@ -415,6 +418,7 @@
       "intro": "For questions about this policy, contact us:",
       "company": "Lotti Laundry",
       "phone": "Phone: +34 635 669 900",
+      "email": "Email: privacy@lotti.com",
       "address": "Address:",
       "location": "Barcelona, Spain",
       "complaint": "You can file a complaint with the Spanish Data Protection Agency (AEPD): www.aepd.es"
@@ -427,5 +431,9 @@
   "cookies": {
     "title": "Cookie Policy",
     "lastUpdated": "Last updated: December 4, 2024"
+  },
+  "promo": {
+    "message": "🎄 Christmas Promo! 50% off your first order in the app",
+    "cta": "Download"
   }
 }

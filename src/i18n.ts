@@ -1,4 +1,3 @@
-import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
 
 export const locales = ['es', 'en', 'ru'] as const;
@@ -12,24 +11,17 @@ export const localeNames: Record<Locale, string> = {
   ru: 'Русский',
 };
 
-// Расширенный маппинг стран
 export const countryToLocale: Record<string, Locale> = {
-  // Испаноязычные
   ES: 'es', MX: 'es', AR: 'es', CO: 'es', CL: 'es', PE: 'es',
   VE: 'es', EC: 'es', GT: 'es', CU: 'es', BO: 'es', DO: 'es',
   HN: 'es', PY: 'es', SV: 'es', NI: 'es', CR: 'es', PA: 'es',
   UY: 'es', PR: 'es',
-  
-  // Англоязычные
   US: 'en', GB: 'en', CA: 'en', AU: 'en', NZ: 'en', IE: 'en',
   ZA: 'en', SG: 'en', IN: 'en',
-  
-  // Русскоязычные
   RU: 'ru', BY: 'ru', KZ: 'ru', UA: 'ru', UZ: 'ru', KG: 'ru',
   TJ: 'ru', AM: 'ru', AZ: 'ru', MD: 'ru',
 };
 
-// Конфигурация локалей для SEO
 export const localeConfig: Record<Locale, {
   currency: string;
   currencySymbol: string;
@@ -56,17 +48,16 @@ export const localeConfig: Record<Locale, {
   },
 };
 
-export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale;
-
-  if (!locale || !locales.includes(locale as Locale)) {
-    locale = defaultLocale;
-  }
+export default getRequestConfig(async ({ locale }) => {
+  // ✅ Если локаль невалидна, используем дефолтную
+  const validLocale = locale && locales.includes(locale as Locale) 
+    ? locale 
+    : defaultLocale;
 
   return {
-    locale,
-    messages: (await import(`./messages/${locale}.json`)).default,
-    timeZone: 'Europe/Madrid', // Меняй в зависимости от основного рынка
+    locale: validLocale,
+    messages: (await import(`./messages/${validLocale}.json`)).default,
+    timeZone: 'Europe/Madrid',
     now: new Date(),
   };
 });

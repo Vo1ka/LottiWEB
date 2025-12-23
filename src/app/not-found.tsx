@@ -4,7 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ArrowLeft } from 'lucide-react';
 
-export default function GlobalNotFound() {
+
+export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#E8F4F8] to-[#F0F8FB] flex items-center justify-center px-4 overflow-hidden relative">
       {/* Animated Bubbles Background */}

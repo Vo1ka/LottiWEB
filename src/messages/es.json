@@ -309,7 +309,9 @@
       "terms": "Términos y condiciones",
       "cookies": "Política de cookies"
     },
-    "copyright": "Todos los derechos reservados."
+    "copyright": "Todos los derechos reservados.",
+    "serviceAreas": "Áreas de servicio: Barcelona, Eixample, Gràcia, Sarrià, Sant Gervasi"
+
   },
   "notFound": {
     "title": "Página no encontrada",
@@ -415,6 +417,7 @@
       "title": "12. Contacto",
       "intro": "Para preguntas sobre esta política, contáctanos:",
       "company": "Lotti Lavandería",
+     "email": "Email: privacy@lotti.com",
       "phone": "Teléfono: +34 635 669 900",
       "address": "Dirección:",
       "location": "Barcelona, España",
@@ -428,5 +431,9 @@
   "cookies": {
     "title": "Política de Cookies",
     "lastUpdated": "Última actualización: 4 de diciembre de 2024"
+  },
+  "promo": {
+    "message": "🎄 ¡Promoción Navideña! 50% de descuento en tu primer pedido en la app",
+    "cta": "Descargar"
   }
 }
