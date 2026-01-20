@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { LanguageSwitcher } from '../LanguageSwitcher';
-import { PromoBar } from '../PromoBanner';
 
 export function Header() {
   const t = useTranslations('nav');
@@ -50,7 +49,6 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
-           <PromoBar />
       <div className="section-wrapper">
         <nav className="flex items-center justify-between h-16 lg:h-24 px-4 lg:px-8">
           {/* Mobile: Burger Left */}

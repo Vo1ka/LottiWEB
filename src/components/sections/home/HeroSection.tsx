@@ -1,5 +1,6 @@
 'use client';
 
+import { PromoBar } from '@/components/PromoBanner';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -7,6 +8,7 @@ export function HeroSection() {
   const t = useTranslations('hero');
 
   return (
+    <>     <PromoBar />
     <section className="relative bg-white pt-0 pb-0 overflow-hidden">
       <div className="relative w-full">
         <div className="relative w-full aspect-[21/9] md:aspect-[24/9] lg:aspect-[28/9] bg-[#B8E6F5] overflow-hidden rounded-b-[40px] md:rounded-b-[60px] lg:rounded-b-[80px]">
@@ -81,5 +83,6 @@ export function HeroSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }
